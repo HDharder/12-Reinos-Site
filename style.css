@@ -1,31 +1,42 @@
-/* --- 1. VARIÁVEIS E CORES DO 5E.TOOLS --- */
+/* --- 1. VARIÁVEIS BASE (Padrão caso a planilha falhe) --- */
 :root {
-    --bg-main: #222;         /* Fundo principal */
-    --bg-dark: #191919;      /* Fundo da navbar */
-    --bg-card: #333;         /* Fundo dos cards */
-    --text-main: #ccc;       /* Texto padrão */
-    --text-muted: #888;      /* Texto secundário */
-    --primary-red: #d23030;  /* Aquele vermelho icônico */
-    --border: #444;          /* Bordas sutis */
+    /* Estas cores serão SOBRESCRITAS pela planilha */
+    --cor-fundo-principal: #222;
+    --cor-navbar: #191919;
+    --cor-card: #333;
+    --cor-texto: #ccc;
+    --cor-destaque: #d23030;
+    --borda-cards: 1px solid #444;
+    --arredondamento: 5px;
+    --tamanho-fonte: 14px;
+    --animacao-hover: translateY(-3px);
+    --imagem-fundo: none;
+    
+    /* Fixas */
     --font-main: 'Roboto', 'Segoe UI', sans-serif;
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
-    background-color: var(--bg-main);
-    color: var(--text-main);
+    background-color: var(--cor-fundo-principal);
+    background-image: var(--imagem-fundo); /* Para imagem de fundo */
+    background-size: cover;
+    background-attachment: fixed;
+    color: var(--cor-texto);
     font-family: var(--font-main);
-    font-size: 14px;
+    font-size: var(--tamanho-fonte);
     height: 100vh;
     display: flex;
     flex-direction: column;
 }
 
+/* --- APLICAÇÃO DAS VARIÁVEIS --- */
+
 /* --- 2. NAVBAR SUPERIOR (Estilo 5e.tools) --- */
 .navbar {
-    background-color: var(--bg-dark);
-    border-bottom: 1px solid var(--border);
+    background-color: var(--cor-navbar);
+    border-bottom: 1px solid var(--borda-cards);
     height: 50px;
     display: flex;
     align-items: center;
@@ -38,7 +49,7 @@ body {
 
 .navbar-brand {
     font-weight: bold;
-    color: var(--primary-red);
+    color: var(--cor-destaque);
     font-size: 18px;
     margin-right: 30px;
     text-decoration: none;
@@ -64,12 +75,11 @@ body {
 }
 
 .nav-btn:hover {
-    background-color: #444;
-    color: white;
+    border: 1px solid var(--cor-destaque); /* Exemplo de uso */
 }
 
 .nav-btn.active {
-    background-color: var(--primary-red);
+    background-color: var(--cor-destaque);
     color: white;
 }
 
@@ -92,9 +102,9 @@ body {
 }
 
 .home-card {
-    background-color: var(--bg-card);
-    border: 1px solid var(--border);
-    border-radius: 5px;
+    background-color: var(--cor-card);
+    border: var(--borda-cards);
+    border-radius: var(--arredondamento);
     padding: 20px;
     text-align: center;
     cursor: pointer;
@@ -106,13 +116,12 @@ body {
 }
 
 .home-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
-    border-color: var(--text-muted);
+    transform: var(--animacao-hover); /* Animação controlada pela planilha! */
+    border-color: var(--cor-destaque);
 }
 
 .home-card h3 {
-    color: var(--primary-red);
+    color: var(--cor-destaque);
     margin-bottom: 5px;
     font-size: 18px;
 }
@@ -152,10 +161,11 @@ thead {
     border-bottom: 2px solid var(--border);
 }
 
+/* Tabela */
 th {
+    color: var(--cor-destaque);
     padding: 10px;
     text-align: left;
-    color: var(--primary-red);
     font-weight: bold;
     font-size: 12px;
     text-transform: uppercase;

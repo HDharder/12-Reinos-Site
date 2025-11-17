@@ -8,6 +8,7 @@ import base64
 import os
 from dotenv import load_dotenv # Nova biblioteca
 
+
 # Carrega variáveis do arquivo .env (se existir no PC)
 load_dotenv()
 
@@ -15,6 +16,8 @@ load_dotenv()
 ARQUIVO_CREDENCIAIS = 'credenciais_google.json'
 ARQUIVO_CONFIG_ETL = 'config.json'
 ARQUIVO_LAYOUT_SITE = 'site_layout.json'
+ABA_PERSONALIZACAO = 'Personalizacao' # <--- ADICIONE ISSO LÁ EM CIMA NAS CONFIGS
+ARQUIVO_STYLE_CONFIG = 'style_config.json' # <--- E ISSO TAMBÉM
 
 # ONDE ESTÁ A CONFIGURAÇÃO NO GOOGLE?
 PLANILHA_MESTRE_CONFIG = '12 Reinos Site' 
@@ -44,48 +47,63 @@ def conectar_google():
         return None
 
 def atualizar_configs_locais(cliente):
-    """Lê as DUAS abas de configuração e salva os JSONs locais."""
+    """Lê abas de configuração e salva os JSONs locais."""
     print("\n📥 Baixando configurações...")
     try:
         planilha = cliente.open(PLANILHA_MESTRE_CONFIG)
         
-        # 1. Atualizar Config de ETL (Leitura de dados)
-        aba_etl = planilha.worksheet(ABA_ETL_CONFIG)
-        dados_etl = aba_etl.get_all_records()
-        
-        # Limpeza básica dos dados de ETL
-        etl_limpo = []
-        for item in dados_etl:
-            if item.get('nome_google'):
-                # Trata linha_cabecalho vazio como 0
-                linha = item.get('linha_cabecalho')
-                item['linha_cabecalho'] = int(linha) if linha != '' and linha is not None else 0
-                
-                # Trata intervalo vazio
-                if item.get('intervalo') is None: item['intervalo'] = ""
-                etl_limpo.append(item)
+        # 1. ETL Config (Dados)
+        try:
+            aba_etl = planilha.worksheet(ABA_ETL_CONFIG)
+            dados_etl = aba_etl.get_all_records()
+            # ... (Limpeza igual ao código anterior) ...
+            etl_limpo = []
+            for item in dados_etl:
+                if item.get('nome_google'):
+                    linha = item.get('linha_cabecalho')
+                    item['linha_cabecalho'] = int(linha) if linha != '' and linha is not None else 0
+                    if item.get('intervalo') is None: item['intervalo'] = ""
+                    etl_limpo.append(item)
 
-        with open(ARQUIVO_CONFIG_ETL, 'w', encoding='utf-8') as f:
-            json.dump(etl_limpo, f, indent=4, ensure_ascii=False)
-        print(f"✅ {ARQUIVO_CONFIG_ETL} atualizado ({len(etl_limpo)} tarefas).")
+            with open(ARQUIVO_CONFIG_ETL, 'w', encoding='utf-8') as f:
+                json.dump(etl_limpo, f, indent=4, ensure_ascii=False)
+            print(f"✅ {ARQUIVO_CONFIG_ETL} atualizado.")
+        except Exception as e: print(f"Erro ETL: {e}")
 
-        # 2. Atualizar Layout do Site (NOVO!)
+        # 2. Layout do Site (Menu/Estrutura)
         try:
             aba_site = planilha.worksheet(ABA_SITE_LAYOUT)
             dados_site = aba_site.get_all_records()
-            # Salva direto, o JS do site vai se virar com os dados
             with open(ARQUIVO_LAYOUT_SITE, 'w', encoding='utf-8') as f:
                 json.dump(dados_site, f, indent=4, ensure_ascii=False)
             print(f"✅ {ARQUIVO_LAYOUT_SITE} atualizado.")
+        except: pass
+
+        # 3. PERSONALIZAÇÃO (NOVO!) 🎨
+        try:
+            aba_style = planilha.worksheet(ABA_PERSONALIZACAO)
+            # Pega valores brutos (Coluna A e B)
+            dados_brutos = aba_style.get_all_values()
             
-            # Retorna True para avisar que precisamos enviar esse arquivo pro GitHub também
-            return True 
+            config_dict = {}
+            # Pula a primeira linha (cabeçalho)
+            for linha in dados_brutos[1:]: 
+                if len(linha) >= 2 and linha[0].strip() != "":
+                    chave = linha[0].strip()
+                    valor = linha[1].strip()
+                    config_dict[chave] = valor
+            
+            with open(ARQUIVO_STYLE_CONFIG, 'w', encoding='utf-8') as f:
+                json.dump(config_dict, f, indent=4, ensure_ascii=False)
+            print(f"✅ {ARQUIVO_STYLE_CONFIG} atualizado (Cores e Estilos).")
+            
         except gspread.WorksheetNotFound:
-            print(f"⚠️ Aba '{ABA_SITE_LAYOUT}' não encontrada. O site usará o layout antigo.")
-            return False
+            print("⚠️ Aba 'Personalizacao' não encontrada. Usando padrão.")
+
+        return True
 
     except Exception as e:
-        print(f"❌ Erro ao baixar configs: {e}")
+        print(f"❌ Erro crítico nas configs: {e}")
         return False
 
 def processar_planilhas(cliente):
@@ -160,9 +178,11 @@ if __name__ == "__main__":
         
         # 2. Se o layout mudou, envia o arquivo de layout pro GitHub também
         if layout_atualizado:
-            with open(ARQUIVO_LAYOUT_SITE, 'r', encoding='utf-8') as f:
-                layout_content = f.read()
-            enviar_github(layout_content, ARQUIVO_LAYOUT_SITE)
+            # Envia os JSONs de config
+            for arq in [ARQUIVO_LAYOUT_SITE, ARQUIVO_STYLE_CONFIG]: # <--- ADICIONADO O NOVO ARQUIVO AQUI
+                if os.path.exists(arq):
+                    with open(arq, 'r', encoding='utf-8') as f:
+                        enviar_github(f.read(), arq)
 
         # 3. Processa e envia os dados
         arquivos = processar_planilhas(cliente)

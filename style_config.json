@@ -1,0 +1,12 @@
+{
+    "titulo_site": "🐲 12 Reinos",
+    "--cor-fundo-principal": "#121212",
+    "--cor-navbar": "#1a1a1a",
+    "--cor-destaque": "#d23030",
+    "--cor-texto": "#e0e0e0",
+    "--borda-cards": "1px solid #444",
+    "--arredondamento": "8px",
+    "--tamanho-fonte": "14px",
+    "--animacao-hover": "translateY(-5px)",
+    "--imagem-fundo": "none"
+}

@@ -2,17 +2,45 @@
 let configSite = [];
 let dadosAtuais = []; // Guarda os dados da página aberta para filtro
 
+// Carrega as cores da planilha e aplica no CSS
+async function carregarEstilos() {
+    try {
+        const resp = await fetch('style_config.json?nocache=' + Date.now());
+        const estilos = await resp.json();
+        
+        // O Segredo: Percorre cada linha da planilha e injeta no CSS do navegador
+        const root = document.documentElement;
+        
+        for (const [chave, valor] of Object.entries(estilos)) {
+            // Só aplica se a chave começar com "--" (segurança básica)
+            if (chave.startsWith('--')) {
+                root.style.setProperty(chave, valor);
+            }
+            
+            // BÔNUS: Configurações que não são CSS
+            if (chave === 'titulo_site') {
+                document.title = valor;
+                document.querySelector('.navbar-brand').innerText = valor;
+            }
+        }
+        console.log("🎨 Estilos personalizados aplicados!");
+    } catch (e) {
+        console.log("Usando estilos padrão (não foi possível carregar personalização).");
+    }
+}
+
 // 1. INICIALIZAÇÃO
 async function init() {
+    // 1. Carrega visual primeiro
+    await carregarEstilos();
+
+    // 2. Depois carrega conteúdo
     try {
-        // Busca configurações
         const resp = await fetch('site_layout.json?nocache=' + Date.now());
         configSite = await resp.json();
-        
         construirInterface();
     } catch (e) {
         console.error("Erro fatal:", e);
-        document.body.innerHTML = "<h1 style='color:white;text-align:center;margin-top:50px'>Erro ao carregar site_layout.json</h1>";
     }
 }
 
