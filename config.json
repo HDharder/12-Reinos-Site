@@ -26,5 +26,12 @@
         "caminho_github": "dados/CraftItem.json",
         "linha_cabecalho": 0,
         "intervalo": ""
+    },
+    {
+        "nome_google": "Cópia de Tabela de Craft",
+        "nome_aba": "Materiais",
+        "caminho_github": "dados/CraftMateriais.json",
+        "linha_cabecalho": 0,
+        "intervalo": ""
     }
 ]
