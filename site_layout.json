@@ -1,0 +1,14 @@
+[
+    {
+        "nome_menu": "Personagens",
+        "arquivo_json": "dados/personagens.json",
+        "tipo_exibicao": "tabela",
+        "colunas_visiveis": "Nome, Classe, Nivel"
+    },
+    {
+        "nome_menu": "Lojas",
+        "arquivo_json": "dados/Lojas.json",
+        "tipo_exibicao": "cards",
+        "colunas_visiveis": "Loja, Tipo, Preco"
+    }
+]
