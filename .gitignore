@@ -1,0 +1,5 @@
+credenciais_google.json
+venv/
+__pycache__/
+github token
+.env

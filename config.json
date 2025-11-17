@@ -1,0 +1,30 @@
+[
+    {
+        "nome_google": "Cópia de Mesas Jogadas",
+        "nome_aba": "Personagens",
+        "caminho_github": "dados/personagens.json",
+        "linha_cabecalho": 1,
+        "intervalo": ""
+    },
+    {
+        "nome_google": "Cópia de Mesas Jogadas",
+        "nome_aba": "Inventário",
+        "caminho_github": "dados/Inventario.json",
+        "linha_cabecalho": 0,
+        "intervalo": ""
+    },
+    {
+        "nome_google": "Cópia de Mesas Jogadas",
+        "nome_aba": "Player ID",
+        "caminho_github": "dados/Lojas.json",
+        "linha_cabecalho": 0,
+        "intervalo": "P:T"
+    },
+    {
+        "nome_google": "Cópia de Tabela de Craft",
+        "nome_aba": "Itens",
+        "caminho_github": "dados/CraftItem.json",
+        "linha_cabecalho": 0,
+        "intervalo": ""
+    }
+]

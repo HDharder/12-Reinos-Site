@@ -1,0 +1,41 @@
+name: Atualizar Site via Python
+
+on:
+  workflow_dispatch:      # Permite clicar num botão no site do GitHub para rodar
+  repository_dispatch:    # Permite receber o sinal da Planilha (O Botão Mágico)
+    types: [atualizar_site]
+  schedule:
+    - cron: '0 10 * * *'  # (Opcional) Roda todo dia as 10h da manhã sozinho
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Baixar repositório
+        uses: actions/checkout@v3
+
+      - name: Configurar Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: Instalar bibliotecas
+        run: |
+          pip install -r requirements.txt
+
+      - name: Criar arquivo de credenciais
+        env:
+          CREDENCIAIS_CONTEUDO: ${{ secrets.CREDENCIAIS_GOOGLE_JSON }}
+        run: |
+          echo "$CREDENCIAIS_CONTEUDO" > credenciais_google.json
+
+      - name: Rodar o Robô
+        env:
+          # O GitHub pega o Secret e coloca disponível para o Python ler com os.getenv
+          TOKEN_GITHUB: ${{ secrets.TOKEN_GITHUB }}
+        run: |
+          python gerar_json.py
