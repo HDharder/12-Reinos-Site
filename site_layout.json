@@ -3,7 +3,7 @@
         "nome_menu": "Personagens",
         "arquivo_json": "dados/personagens.json",
         "tipo_exibicao": "tabela",
-        "colunas_visiveis": "Nome, Classe, Nivel"
+        "colunas_visiveis": "Personagem, Classe, Nivel"
     },
     {
         "nome_menu": "Lojas",
