@@ -3,12 +3,12 @@
         "nome_menu": "Personagens",
         "arquivo_json": "dados/personagens.json",
         "tipo_exibicao": "tabela",
-        "colunas_visiveis": "Nome, Classe, Nivel"
+        "colunas_visiveis": "Personagem, Classe, Level"
     },
     {
         "nome_menu": "Lojas",
         "arquivo_json": "dados/Lojas.json",
         "tipo_exibicao": "cards",
-        "colunas_visiveis": "Loja, Tipo, Preco"
+        "colunas_visiveis": "tipo de loja, possibilidades"
     }
 ]
