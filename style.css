@@ -1,123 +1,175 @@
-/* Reset básico */
-* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Roboto', sans-serif; }
+/* --- 1. VARIÁVEIS E CORES DO 5E.TOOLS --- */
+:root {
+    --bg-main: #222;         /* Fundo principal */
+    --bg-dark: #191919;      /* Fundo da navbar */
+    --bg-card: #333;         /* Fundo dos cards */
+    --text-main: #ccc;       /* Texto padrão */
+    --text-muted: #888;      /* Texto secundário */
+    --primary-red: #d23030;  /* Aquele vermelho icônico */
+    --border: #444;          /* Bordas sutis */
+    --font-main: 'Roboto', 'Segoe UI', sans-serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
-    background-color: #1b1b1b; /* Fundo bem escuro */
-    color: #e0e0e0;
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    font-family: var(--font-main);
+    font-size: 14px;
     height: 100vh;
-    overflow: hidden; /* Evita barra de rolagem no corpo */
-}
-
-.layout-container {
-    display: flex;
-    height: 100%;
-}
-
-/* --- SIDEBAR (Barra Lateral) --- */
-.sidebar {
-    width: 250px;
-    background-color: #222;
-    border-right: 1px solid #444;
     display: flex;
     flex-direction: column;
 }
 
-.logo-area {
-    padding: 20px;
-    border-bottom: 1px solid #333;
-    text-align: center;
-    color: #d23030; /* Vermelho dragão */
+/* --- 2. NAVBAR SUPERIOR (Estilo 5e.tools) --- */
+.navbar {
+    background-color: var(--bg-dark);
+    border-bottom: 1px solid var(--border);
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
 }
 
-#menu-dinamico button {
-    width: 100%;
-    padding: 15px 20px;
+.navbar-brand {
+    font-weight: bold;
+    color: var(--primary-red);
+    font-size: 18px;
+    margin-right: 30px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.nav-links {
+    display: flex;
+    gap: 5px;
+}
+
+.nav-btn {
     background: none;
     border: none;
-    color: #bbb;
-    text-align: left;
+    color: var(--text-main);
+    padding: 8px 12px;
     cursor: pointer;
-    border-bottom: 1px solid #2a2a2a;
-    transition: 0.2s;
-    font-size: 16px;
+    font-size: 13px;
+    border-radius: 4px;
+    transition: background 0.2s;
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
-#menu-dinamico button:hover {
-    background-color: #333;
-    color: white;
-    padding-left: 25px; /* Efeito de deslizar */
-}
-
-#menu-dinamico button.active {
-    background-color: #d23030;
+.nav-btn:hover {
+    background-color: #444;
     color: white;
 }
 
-/* --- CONTEÚDO PRINCIPAL --- */
-.content-area {
+.nav-btn.active {
+    background-color: var(--primary-red);
+    color: white;
+}
+
+/* --- 3. CONTEÚDO PRINCIPAL --- */
+#main-container {
     flex: 1;
+    overflow-y: auto; /* Rolagem interna */
+    padding: 20px;
+    max-width: 1600px; /* Largura máxima para telas gigantes */
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* --- 4. HOME GRID (A Tela Inicial) --- */
+.home-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+    padding-top: 40px;
+}
+
+.home-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
     display: flex;
     flex-direction: column;
-    background-color: #151515;
+    justify-content: center;
+    height: 120px;
 }
 
-header {
-    padding: 20px;
-    background-color: #222;
-    border-bottom: 1px solid #444;
+.home-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    border-color: var(--text-muted);
+}
+
+.home-card h3 {
+    color: var(--primary-red);
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+
+.home-card p {
+    color: var(--text-muted);
+    font-size: 12px;
+}
+
+/* --- 5. TABELAS DE DADOS (List View) --- */
+.table-controls {
+    margin-bottom: 15px;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    gap: 10px;
 }
 
-.search-bar input {
-    padding: 8px;
-    border-radius: 4px;
-    border: 1px solid #555;
-    background-color: #333;
+.search-input {
+    width: 100%;
+    max-width: 400px;
+    padding: 8px 12px;
+    background-color: #111;
+    border: 1px solid var(--border);
     color: white;
+    border-radius: 4px;
 }
 
-.data-container {
-    flex: 1;
-    padding: 20px;
-    overflow-y: auto; /* A rolagem acontece só aqui dentro */
-}
-
-/* --- TABELAS (Estilo 5e.tools) --- */
 table {
     width: 100%;
     border-collapse: collapse;
-    font-size: 14px;
+    background-color: #2b2b2b;
+    border-radius: 3px;
+    overflow: hidden;
 }
 
 thead {
-    background-color: #333;
-    position: sticky;
-    top: 0;
+    background-color: #3a3a3a;
+    border-bottom: 2px solid var(--border);
 }
 
-th, td {
+th {
     padding: 10px;
     text-align: left;
+    color: var(--primary-red);
+    font-weight: bold;
+    font-size: 12px;
+    text-transform: uppercase;
+    cursor: pointer; /* Indica que dá pra ordenar */
+}
+
+td {
+    padding: 8px 10px;
     border-bottom: 1px solid #333;
+    color: #ddd;
 }
 
-th { color: #d23030; font-weight: bold; }
-tr:hover { background-color: #252525; }
+tr:nth-child(even) { background-color: #303030; }
+tr:hover { background-color: #444; }
 
-/* --- CARDS (Estilo Alternativo) --- */
-.cards-wrapper {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 20px;
-}
-
-.card {
-    background-color: #222;
-    border: 1px solid #444;
-    padding: 15px;
-    border-radius: 5px;
-}
-.card h3 { color: #d23030; margin-bottom: 10px; }
-.card p { font-size: 13px; color: #aaa; margin-bottom: 5px; }
+/* --- Esconder coisas dinamicamente --- */
+.hidden { display: none !important; }

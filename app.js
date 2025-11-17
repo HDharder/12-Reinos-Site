@@ -1,74 +1,100 @@
-// Variável para guardar o JSON de layout
-let layoutConfig = [];
+// Estado Global
+let configSite = [];
+let dadosAtuais = []; // Guarda os dados da página aberta para filtro
 
-// 1. Inicialização: Busca a configuração do site
-async function carregarSite() {
+// 1. INICIALIZAÇÃO
+async function init() {
     try {
-        const response = await fetch('site_layout.json?nocache=' + new Date().getTime());
-        layoutConfig = await response.json();
-        construirMenu();
-    } catch (error) {
-        console.error("Erro ao carregar layout:", error);
-        document.getElementById('menu-dinamico').innerHTML = "<p style='color:red'>Erro ao carregar site_layout.json</p>";
+        // Busca configurações
+        const resp = await fetch('site_layout.json?nocache=' + Date.now());
+        configSite = await resp.json();
+        
+        construirInterface();
+    } catch (e) {
+        console.error("Erro fatal:", e);
+        document.body.innerHTML = "<h1 style='color:white;text-align:center;margin-top:50px'>Erro ao carregar site_layout.json</h1>";
     }
 }
 
-// 2. Constrói os botões do menu baseados no JSON
-function construirMenu() {
-    const menuContainer = document.getElementById('menu-dinamico');
-    menuContainer.innerHTML = ''; // Limpa carregamento
+// 2. CONSTRÓI MENU E HOME
+function construirInterface() {
+    const navContainer = document.getElementById('nav-links-container');
+    const homeContainer = document.getElementById('view-home');
 
-    layoutConfig.forEach((item, index) => {
-        const btn = document.createElement('button');
-        btn.innerText = item.nome_menu;
-        btn.onclick = () => carregarPagina(index);
-        menuContainer.appendChild(btn);
+    navContainer.innerHTML = '';
+    homeContainer.innerHTML = '';
+
+    configSite.forEach((item, index) => {
+        // A. Botão da Navbar (Pequeno)
+        const btnNav = document.createElement('button');
+        btnNav.className = 'nav-btn';
+        btnNav.innerText = item.nome_menu;
+        btnNav.onclick = () => abrirPagina(index);
+        navContainer.appendChild(btnNav);
+
+        // B. Card da Home (Grande)
+        const cardHome = document.createElement('div');
+        cardHome.className = 'home-card';
+        cardHome.innerHTML = `
+            <h3>${item.nome_menu}</h3>
+            <p>Ver lista completa</p>
+        `;
+        cardHome.onclick = () => abrirPagina(index);
+        homeContainer.appendChild(cardHome);
+    });
+}
+
+// 3. NAVEGAÇÃO: MOSTRAR HOME
+function mostrarHome() {
+    // Esconde Tabela, Mostra Home
+    document.getElementById('view-data').classList.add('hidden');
+    document.getElementById('view-home').classList.remove('hidden');
+    
+    // Reseta botões ativos
+    document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+}
+
+// 4. NAVEGAÇÃO: ABRIR UMA PÁGINA
+async function abrirPagina(index) {
+    const item = configSite[index];
+    
+    // UI: Troca visibilidade
+    document.getElementById('view-home').classList.add('hidden');
+    const viewData = document.getElementById('view-data');
+    viewData.classList.remove('hidden');
+
+    // UI: Marca botão ativo
+    document.querySelectorAll('.nav-btn').forEach((btn, i) => {
+        if (i === index) btn.classList.add('active');
+        else btn.classList.remove('active');
     });
 
-    // Carrega a primeira página automaticamente se houver
-    if (layoutConfig.length > 0) {
-        carregarPagina(0);
-    }
-}
-
-// 3. Carrega os dados da página selecionada
-async function carregarPagina(index) {
-    // UI: Atualiza titulo e botões ativos
-    const item = layoutConfig[index];
-    document.getElementById('titulo-pagina').innerText = item.nome_menu;
-    
-    const botoes = document.querySelectorAll('#menu-dinamico button');
-    botoes.forEach(b => b.classList.remove('active'));
-    botoes[index].classList.add('active');
-
-    const areaDados = document.getElementById('area-dados');
-    areaDados.innerHTML = '<p>Carregando dados...</p>';
+    // Carregar Dados
+    const tableWrapper = document.getElementById('table-wrapper');
+    tableWrapper.innerHTML = '<p style="color:#888">Carregando grimório...</p>';
+    document.getElementById('search-box').value = ''; // Limpa busca
 
     try {
-        // Busca o arquivo de dados (ex: dados/personagens.json)
-        // Adiciona timestamp para evitar cache antigo
-        const response = await fetch(item.arquivo_json + '?t=' + new Date().getTime());
-        const dados = await response.json();
-
-        renderizarDados(dados, item);
-    } catch (error) {
-        areaDados.innerHTML = `<p style='color:red'>Erro ao carregar dados: ${item.arquivo_json}</p>`;
-        console.error(error);
+        const resp = await fetch(item.arquivo_json + '?t=' + Date.now());
+        dadosAtuais = await resp.json();
+        
+        renderizarTabela(dadosAtuais, item);
+    } catch (e) {
+        tableWrapper.innerHTML = `<p style="color:red">Erro ao abrir pergaminho: ${item.arquivo_json}</p>`;
     }
 }
 
-// 4. Renderiza (Desenha) os dados na tela
-function renderizarDados(dados, config) {
-    const areaDados = document.getElementById('area-dados');
-    areaDados.innerHTML = '';
+// 5. RENDERIZAÇÃO DA TABELA
+function renderizarTabela(dados, config) {
+    const container = document.getElementById('table-wrapper');
+    container.innerHTML = '';
 
-    if (dados.length === 0) {
-        areaDados.innerHTML = '<p>Nenhum dado encontrado.</p>';
+    if (!dados || dados.length === 0) {
+        container.innerHTML = '<p>Nenhum registro encontrado.</p>';
         return;
     }
 
-    // Define quais colunas mostrar
-    // Se config.colunas_visiveis for vazio, pega todas as chaves do primeiro objeto
+    // Descobre colunas
     let colunas = [];
     if (config.colunas_visiveis && config.colunas_visiveis.trim() !== "") {
         colunas = config.colunas_visiveis.split(',').map(c => c.trim());
@@ -76,18 +102,9 @@ function renderizarDados(dados, config) {
         colunas = Object.keys(dados[0]);
     }
 
-    // Decide o modo de exibição
-    if (config.tipo_exibicao && config.tipo_exibicao.toLowerCase() === 'cards') {
-        criarCards(dados, colunas, areaDados);
-    } else {
-        criarTabela(dados, colunas, areaDados);
-    }
-}
-
-function criarTabela(dados, colunas, container) {
+    // Cria Tabela HTML
     const table = document.createElement('table');
-    table.id = "tabela-dados"; // ID para o filtro funcionar
-
+    
     // Cabeçalho
     const thead = document.createElement('thead');
     const trHead = document.createElement('tr');
@@ -101,54 +118,34 @@ function criarTabela(dados, colunas, container) {
 
     // Corpo
     const tbody = document.createElement('tbody');
-    dados.forEach(linha => {
+    dados.forEach(row => {
         const tr = document.createElement('tr');
         colunas.forEach(col => {
             const td = document.createElement('td');
-            td.innerText = linha[col] || "-"; // Se não tiver dado, põe traço
+            td.innerText = row[col] || "—";
             tr.appendChild(td);
         });
         tbody.appendChild(tr);
     });
     table.appendChild(tbody);
+
     container.appendChild(table);
 }
 
-function criarCards(dados, colunas, container) {
-    const wrapper = document.createElement('div');
-    wrapper.className = 'cards-wrapper';
-
-    dados.forEach(linha => {
-        const card = document.createElement('div');
-        card.className = 'card';
-        
-        // A primeira coluna vira o Título do Card
-        const titulo = linha[colunas[0]];
-        const h3 = document.createElement('h3');
-        h3.innerText = titulo;
-        card.appendChild(h3);
-
-        // O resto vira parágrafos
-        colunas.slice(1).forEach(col => {
-            const p = document.createElement('p');
-            p.innerHTML = `<strong>${col}:</strong> ${linha[col] || ""}`;
-            card.appendChild(p);
-        });
-        wrapper.appendChild(card);
-    });
-    container.appendChild(wrapper);
-}
-
-// 5. Filtro simples (Busca na tabela)
-function filtrarTabela() {
-    const termo = document.getElementById('filtro-global').value.toLowerCase();
-    const linhas = document.querySelectorAll('tbody tr'); // Busca só nas linhas da tabela
+// 6. FILTRO DE BUSCA (Rápido)
+function filtrarDados() {
+    const termo = document.getElementById('search-box').value.toLowerCase();
+    const linhas = document.querySelectorAll('tbody tr');
 
     linhas.forEach(tr => {
         const texto = tr.innerText.toLowerCase();
-        tr.style.display = texto.includes(termo) ? '' : 'none';
+        if (texto.includes(termo)) {
+            tr.style.display = '';
+        } else {
+            tr.style.display = 'none';
+        }
     });
 }
 
-// Inicia tudo
-carregarSite();
+// Start
+init();
