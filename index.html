@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12 Reinos - Data</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="layout-container">
+        <aside class="sidebar">
+            <div class="logo-area">
+                <h2>🐲 12 Reinos</h2>
+            </div>
+            <nav id="menu-dinamico">
+                <p style="padding: 20px; color: #666;">Carregando menu...</p>
+            </nav>
+        </aside>
+
+        <main class="content-area">
+            <header>
+                <h1 id="titulo-pagina">Bem-vindo</h1>
+                <div class="search-bar">
+                    <input type="text" id="filtro-global" placeholder="Filtrar dados..." onkeyup="filtrarTabela()">
+                </div>
+            </header>
+            
+            <div id="area-dados" class="data-container">
+                <p>Selecione uma opção no menu.</p>
+            </div>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
