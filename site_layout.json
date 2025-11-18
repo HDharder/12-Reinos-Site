@@ -9,7 +9,7 @@
         "nome_menu": "Personagens",
         "arquivo_json": "dados/personagens.json",
         "page_layout": "layout_pj",
-        "variaveis": "'Personagens', Classe, 'itemfull', (Personagem, {Total} PO, Level) | Personagem, 'parte1', 'parte2'"
+        "variaveis": "'Personagens', Classe, 'itemfull', (Personagem, {Total} PO, Level)§'item_linha';%Personagem;%'var2';'var3'§ | Personagem, 'parte1', 'parte2'"
     },
     {
         "nome_menu": "Lojas",
