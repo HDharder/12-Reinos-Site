@@ -1,115 +1,130 @@
 {
     "card_rpg": [
         {
-            "nome_template": "card_rpg",
             "tipo_elemento": "titulo",
-            "usa_variavel": "VERDADEIRO",
+            "usa_variavel": true,
             "texto_antes": "",
-            "classe_extra": "text-destaque"
+            "classe_extra": "text-destaque",
+            "signal_emit": "",
+            "signal_receive": ""
         },
         {
-            "nome_template": "card_rpg",
             "tipo_elemento": "subtitulo",
-            "usa_variavel": "VERDADEIRO",
+            "usa_variavel": true,
             "texto_antes": "",
-            "classe_extra": ""
+            "classe_extra": "",
+            "signal_emit": "",
+            "signal_receive": ""
         },
         {
-            "nome_template": "card_rpg",
             "tipo_elemento": "texto",
-            "usa_variavel": "VERDADEIRO",
+            "usa_variavel": true,
             "texto_antes": "Nível:",
-            "classe_extra": ""
+            "classe_extra": "",
+            "signal_emit": "",
+            "signal_receive": ""
         },
         {
-            "nome_template": "card_rpg",
             "tipo_elemento": "texto",
-            "usa_variavel": "VERDADEIRO",
+            "usa_variavel": true,
             "texto_antes": "Classe:",
-            "classe_extra": ""
+            "classe_extra": "",
+            "signal_emit": "",
+            "signal_receive": ""
         },
         {
-            "nome_template": "card_rpg",
             "tipo_elemento": "etiqueta",
-            "usa_variavel": "VERDADEIRO",
+            "usa_variavel": true,
             "texto_antes": "",
-            "classe_extra": "badge"
+            "classe_extra": "badge",
+            "signal_emit": "",
+            "signal_receive": ""
         },
         {
-            "nome_template": "card_rpg",
             "tipo_elemento": "divisor",
-            "usa_variavel": "FALSO",
+            "usa_variavel": false,
             "texto_antes": "",
-            "classe_extra": ""
+            "classe_extra": "",
+            "signal_emit": "",
+            "signal_receive": ""
         }
     ],
     "loja_simples": [
         {
-            "nome_template": "loja_simples",
             "tipo_elemento": "titulo",
-            "usa_variavel": "VERDADEIRO",
+            "usa_variavel": true,
             "texto_antes": "",
-            "classe_extra": ""
+            "classe_extra": "",
+            "signal_emit": "",
+            "signal_receive": ""
         },
         {
-            "nome_template": "loja_simples",
             "tipo_elemento": "texto",
-            "usa_variavel": "VERDADEIRO",
+            "usa_variavel": true,
             "texto_antes": "",
-            "classe_extra": "cor-ouro"
+            "classe_extra": "cor-ouro",
+            "signal_emit": "",
+            "signal_receive": ""
         }
     ],
     "item_linha": [
         {
-            "nome_template": "item_linha",
             "tipo_elemento": "texto",
-            "usa_variavel": "VERDADEIRO",
+            "usa_variavel": true,
             "texto_antes": "",
-            "classe_extra": "col-nome"
+            "classe_extra": "col-nome",
+            "signal_emit": "",
+            "signal_receive": "sinal_ver_detalhe"
         },
         {
-            "nome_template": "item_linha",
             "tipo_elemento": "etiqueta",
-            "usa_variavel": "VERDADEIRO",
+            "usa_variavel": true,
             "texto_antes": "",
-            "classe_extra": "col-tipo"
+            "classe_extra": "col-tipo",
+            "signal_emit": "",
+            "signal_receive": "sinal_ver_detalhe"
         },
         {
-            "nome_template": "item_linha",
             "tipo_elemento": "etiqueta",
-            "usa_variavel": "VERDADEIRO",
+            "usa_variavel": true,
             "texto_antes": "",
-            "classe_extra": "col-raridade"
+            "classe_extra": "col-raridade",
+            "signal_emit": "",
+            "signal_receive": "sinal_ver_detalhe"
         }
     ],
     "item_full": [
         {
-            "nome_template": "item_full",
             "tipo_elemento": "titulo",
-            "usa_variavel": "VERDADEIRO",
+            "usa_variavel": true,
             "texto_antes": "",
-            "classe_extra": "titulo-item"
+            "classe_extra": "titulo-item",
+            "signal_emit": "",
+            "signal_receive": ""
         },
         {
-            "nome_template": "item_full",
             "tipo_elemento": "subtitulo",
-            "usa_variavel": "VERDADEIRO",
+            "usa_variavel": true,
             "texto_antes": "",
-            "classe_extra": "italico"
+            "classe_extra": "italico",
+            "signal_emit": "",
+            "signal_receive": ""
         },
         {
-            "nome_template": "item_full",
             "tipo_elemento": "divisor",
-            "usa_variavel": "FALSO",
+            "usa_variavel": false,
             "texto_antes": "",
-            "classe_extra": ""
+            "classe_extra": "",
+            "signal_emit": "",
+            "signal_receive": ""
         },
         {
-            "nome_template": "item_full",
             "tipo_elemento": "tabela_dinamica",
-            "usa_variavel": "VERDADEIRO",
+            "usa_variavel": true,
             "texto_antes": "",
-            "classe_extra": "tabela-pequena"
+            "classe_extra": "tabela-pequena",
+            "signal_emit": "sinal_ver_detalhe",
+            "signal_receive": ""
         }
     ]
 }
