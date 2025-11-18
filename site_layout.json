@@ -3,18 +3,21 @@
         "nome_menu": "Itens",
         "arquivo_json": "dados/Inventario.json",
         "page_layout": "",
-        "variaveis": "PERSONAGEM, {Total} PO, JOGADOR"
+        "variaveis": "PERSONAGEM, {Total} PO, JOGADOR",
+        "dados_sinais": ""
     },
     {
         "nome_menu": "Personagens",
         "arquivo_json": "dados/personagens.json",
         "page_layout": "layout_pj",
-        "variaveis": "'Personagens', Classe, 'itemfull', (Personagem, {Total} PO, Level)§'item_linha';%Personagem;%'var2';'var3'§ | Personagem, 'parte1', 'parte2'"
+        "variaveis": "'Personagens', Classe, 'itemfull', (Personagem, {Total} PO, Level) | Personagem, 'parte1', 'parte2'",
+        "dados_sinais": "sinal_ver_detalhe=%Personagem;'parte 1';'parte 2'"
     },
     {
         "nome_menu": "Lojas",
         "arquivo_json": "dados/Lojas.json",
         "page_layout": "",
-        "variaveis": "tipo de loja, possibilidades"
+        "variaveis": "tipo de loja, possibilidades",
+        "dados_sinais": ""
     }
 ]
