@@ -1,4 +1,4 @@
 {
-    "card_rpg": "<div class=\"auto-card card_rpg\"><h3 class=\"auto-titulo text-destaque\">{{Nome}}</h3><h4 class=\"auto-subtitulo \">{{Raca}}</h4><p class=\"auto-texto \"><strong>Nível:</strong>{{Nivel}}</p><p class=\"auto-texto \"><strong>Classe:</strong>{{Classe}}</p><div><span class=\"auto-etiqueta badge\">{{Tendencia}}</span></div></div>",
+    "card_rpg": "<div class=\"auto-card card_rpg\"><h3 class=\"auto-titulo text-destaque\">{{Personagem}}</h3><h4 class=\"auto-subtitulo \">{{Raca}}</h4><p class=\"auto-texto \"><strong>Nível:</strong>{{Level}}</p><p class=\"auto-texto \"><strong>Classe:</strong>{{Classe}}</p><div><span class=\"auto-etiqueta badge\">{{Tendencia}}</span></div></div>",
     "loja_simples": "<div class=\"auto-card loja_simples\"><h3 class=\"auto-titulo \">{{Loja}}</h3><p class=\"auto-texto cor-ouro\"><strong>Custa:</strong>{{Preco}}</p></div>"
 }
