@@ -2,13 +2,13 @@
     {
         "nome_menu": "Personagens",
         "arquivo_json": "dados/personagens.json",
-        "tipo_exibicao": "tabela",
+        "tipo_exibicao": "card_rpg",
         "colunas_visiveis": "Personagem, Classe, Level"
     },
     {
         "nome_menu": "Lojas",
         "arquivo_json": "dados/Lojas.json",
-        "tipo_exibicao": "cards",
+        "tipo_exibicao": "tabela_simples",
         "colunas_visiveis": "tipo de loja, possibilidades"
     }
 ]
