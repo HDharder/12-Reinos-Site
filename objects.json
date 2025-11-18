@@ -1,0 +1,86 @@
+{
+    "btn_padrao": {
+        "nome_objeto": "btn_padrao",
+        "tag": "button",
+        "classes": "nav-btn",
+        "conteudo": "{{texto}}",
+        "atributos": "onclick=\"{{acao}}\""
+    },
+    "card": {
+        "nome_objeto": "card",
+        "tag": "div",
+        "classes": "auto-card",
+        "conteudo": "{{valor}}",
+        "atributos": ""
+    },
+    "divisor": {
+        "nome_objeto": "divisor",
+        "tag": "hr",
+        "classes": "auto-divisor",
+        "conteudo": "",
+        "atributos": ""
+    },
+    "etiqueta": {
+        "nome_objeto": "etiqueta",
+        "tag": "span",
+        "classes": "auto-etiqueta",
+        "conteudo": "{{valor}}",
+        "atributos": ""
+    },
+    "html_livre": {
+        "nome_objeto": "html_livre",
+        "tag": "div",
+        "classes": "",
+        "conteudo": "{{valor}}",
+        "atributos": ""
+    },
+    "imagem": {
+        "nome_objeto": "imagem",
+        "tag": "img",
+        "classes": "auto-imagem",
+        "conteudo": "",
+        "atributos": "src=\"{{valor}}\" alt=\"Imagem\""
+    },
+    "img_capa": {
+        "nome_objeto": "img_capa",
+        "tag": "img",
+        "classes": "auto-imagem",
+        "conteudo": "",
+        "atributos": "src=\"{{url}}\""
+    },
+    "subtitulo": {
+        "nome_objeto": "subtitulo",
+        "tag": "h4",
+        "classes": "auto-subtitulo",
+        "conteudo": "{{valor}}",
+        "atributos": ""
+    },
+    "tabela": {
+        "nome_objeto": "tabela",
+        "tag": "table",
+        "classes": "tabela-padrao",
+        "conteudo": "__SMART_TABLE__",
+        "atributos": ""
+    },
+    "tabela_dinamica": {
+        "nome_objeto": "tabela_dinamica",
+        "tag": "table",
+        "classes": "tabela-padrao",
+        "conteudo": "__SMART_TABLE__",
+        "atributos": ""
+    },
+    "texto": {
+        "nome_objeto": "texto",
+        "tag": "p",
+        "classes": "auto-texto",
+        "conteudo": "{{valor}}",
+        "atributos": ""
+    },
+    "titulo": {
+        "nome_objeto": "titulo",
+        "tag": "h3",
+        "classes": "auto-titulo",
+        "conteudo": "{{valor}}",
+        "atributos": ""
+    }
+}
