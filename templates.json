@@ -109,7 +109,7 @@
             "tipo_elemento": "tabela_dinamica",
             "usa_variavel": "VERDADEIRO",
             "texto_antes": "",
-            "classe_extra": "texto-longo"
+            "classe_extra": "tabela-pequena"
         }
     ]
 }
