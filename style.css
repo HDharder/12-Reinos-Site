@@ -1,185 +1,26 @@
-/* --- 1. VARIÁVEIS BASE (Padrão caso a planilha falhe) --- */
-:root {
-    /* Estas cores serão SOBRESCRITAS pela planilha */
-    --cor-fundo-principal: #222;
-    --cor-navbar: #191919;
-    --cor-card: #333;
-    --cor-texto: #ccc;
-    --cor-destaque: #d23030;
-    --borda-cards: 1px solid #444;
-    --arredondamento: 5px;
-    --tamanho-fonte: 14px;
-    --animacao-hover: translateY(-3px);
-    --imagem-fundo: none;
-    
-    /* Fixas */
-    --font-main: 'Roboto', 'Segoe UI', sans-serif;
-}
 
-* { margin: 0; padding: 0; box-sizing: border-box; }
-
-body {
-    background-color: var(--cor-fundo-principal);
-    background-image: var(--imagem-fundo); /* Para imagem de fundo */
-    background-size: cover;
-    background-attachment: fixed;
-    color: var(--cor-texto);
-    font-family: var(--font-main);
-    font-size: var(--tamanho-fonte);
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
-
-/* --- APLICAÇÃO DAS VARIÁVEIS --- */
-
-/* --- 2. NAVBAR SUPERIOR (Estilo 5e.tools) --- */
-.navbar {
-    background-color: var(--cor-navbar);
-    border-bottom: 1px solid var(--borda-cards);
-    height: 50px;
-    display: flex;
-    align-items: center;
-    padding: 0 20px;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
-}
-
-.navbar-brand {
-    font-weight: bold;
-    color: var(--cor-destaque);
-    font-size: 18px;
-    margin-right: 30px;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-.nav-links {
-    display: flex;
-    gap: 5px;
-}
-
-.nav-btn {
-    background: none;
-    border: none;
-    color: var(--text-main);
-    padding: 8px 12px;
-    cursor: pointer;
-    font-size: 13px;
-    border-radius: 4px;
-    transition: background 0.2s;
-    text-transform: uppercase;
-    font-weight: bold;
-}
-
-.nav-btn:hover {
-    border: 1px solid var(--cor-destaque); /* Exemplo de uso */
-}
-
-.nav-btn.active {
-    background-color: var(--cor-destaque);
-    color: white;
-}
-
-/* --- 3. CONTEÚDO PRINCIPAL --- */
-#main-container {
-    flex: 1;
-    overflow-y: auto; /* Rolagem interna */
-    padding: 20px;
-    max-width: 1600px; /* Largura máxima para telas gigantes */
-    margin: 0 auto;
-    width: 100%;
-}
-
-/* --- 4. HOME GRID (A Tela Inicial) --- */
-.home-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 15px;
-    padding-top: 40px;
-}
-
-.home-card {
-    background-color: var(--cor-card);
-    border: var(--borda-cards);
-    border-radius: var(--arredondamento);
-    padding: 20px;
-    text-align: center;
-    cursor: pointer;
-    transition: transform 0.2s, box-shadow 0.2s;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 120px;
-}
-
-.home-card:hover {
-    transform: var(--animacao-hover); /* Animação controlada pela planilha! */
-    border-color: var(--cor-destaque);
-}
-
-.home-card h3 {
-    color: var(--cor-destaque);
-    margin-bottom: 5px;
-    font-size: 18px;
-}
-
-.home-card p {
-    color: var(--text-muted);
-    font-size: 12px;
-}
-
-/* --- 5. TABELAS DE DADOS (List View) --- */
-.table-controls {
-    margin-bottom: 15px;
-    display: flex;
-    gap: 10px;
-}
-
-.search-input {
-    width: 100%;
-    max-width: 400px;
-    padding: 8px 12px;
-    background-color: #111;
-    border: 1px solid var(--border);
-    color: white;
-    border-radius: 4px;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    background-color: #2b2b2b;
-    border-radius: 3px;
-    overflow: hidden;
-}
-
-thead {
-    background-color: #3a3a3a;
-    border-bottom: 2px solid var(--border);
-}
-
-/* Tabela */
-th {
-    color: var(--cor-destaque);
-    padding: 10px;
-    text-align: left;
-    font-weight: bold;
-    font-size: 12px;
-    text-transform: uppercase;
-    cursor: pointer; /* Indica que dá pra ordenar */
-}
-
-td {
-    padding: 8px 10px;
-    border-bottom: 1px solid #333;
-    color: #ddd;
-}
-
-tr:nth-child(even) { background-color: #303030; }
-tr:hover { background-color: #444; }
-
-/* --- Esconder coisas dinamicamente --- */
+/* CSS Base gerado automaticamente */
+* { box-sizing: border-box; margin: 0; padding: 0; }
 .hidden { display: none !important; }
+
+/* --- Estilos da Planilha --- */
+body {
+    background-color: #121212;
+    color: #cccccc;
+}
+.navbar {
+    background-color: #000000;
+    border: 1px solid #333;
+}
+.card {
+    background-color: #1e1e1e;
+    border: 1px solid #444;
+    padding: 15px;
+    border-radius: 8px;
+}
+.card:hover {
+    border: 1px solid red;
+}
+h3 {
+    color: #d23030;
+}
