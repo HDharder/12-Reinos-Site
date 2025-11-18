@@ -161,64 +161,75 @@ tr:hover {
   display: none !important;
 }
 
-        /* Estilos da Home Automática */
-        #view-home {
-            padding: 40px;
-            max-width: 1200px;
-            margin: 0 auto;
+        /* Reset e Base */
+        html, body { height: 100%; margin: 0; overflow: hidden; /* Impede scroll na página toda */ }
+        
+        /* O Container do Grid ocupa o espaço que sobra abaixo da navbar */
+        #main-container {
+            height: calc(100vh - 50px); /* 50px é a altura da navbar */
             width: 100%;
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 20px;
+            padding: 0;
+            overflow: hidden;
         }
-        
-        .home-card {
-            background: #2a2a2a;
-            border: 1px solid #444;
-            border-radius: 8px;
-            padding: 30px 20px;
-            text-align: center;
-            cursor: pointer;
-            transition: transform 0.2s, border-color 0.2s;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 150px;
-        }
-        
-        .home-card:hover {
-            transform: translateY(-5px);
-            border-color: var(--cor-destaque, #d23030);
-            background: #333;
-        }
-        
-        .home-card h3 {
-            color: var(--cor-destaque, #d23030);
-            font-size: 1.5em;
-            margin-bottom: 10px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        
-        .home-card p {
-            color: #888;
-            font-size: 0.9em;
-        }
+
         .hidden { display: none !important; }
-        /* O container da página grid */
+
+        /* Grid Layout */
         .page-grid-container {
             display: grid;
-            gap: 20px;
-            padding: 20px;
+            gap: 10px;
+            padding: 10px;
             width: 100%;
-            /* Altura mínima para preencher tela */
-            min-height: calc(100vh - 60px); 
+            height: 100%; /* Força altura total */
+            /* As linhas/colunas são definidas pelo JS via style inline */
         }
-        /* Classes automáticas */
-        .auto-card { display: flex; flex-direction: column; gap: 5px; padding: 15px; border: 1px solid #444; background: #222; border-radius: 5px; height: 100%; overflow-y: auto; }
-        .auto-titulo { color: var(--cor-destaque, #d23030); font-weight: bold; font-size: 1.2em; margin: 0; }
-        .auto-subtitulo { color: #888; font-size: 0.9em; margin-bottom: 10px; }
-        .auto-imagem { width: 100%; border-radius: 4px; object-fit: cover; margin-bottom: 10px; }
-        .auto-etiqueta { background: #444; padding: 2px 8px; border-radius: 10px; font-size: 0.8em; display: inline-block; }
+
+        /* Wrapper do Componente (A célula do grid) */
+        .component-wrapper {
+            position: relative;
+            height: 100%;
+            width: 100%;
+            overflow: hidden; /* O scroll acontece dentro do auto-card */
+            min-height: 0; /* Truque CSS Grid para scroll funcionar */
+            min-width: 0;
+        }
+
+        /* O Cartão em si */
+        .auto-card {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding: 15px;
+            border: 1px solid #444;
+            background: #222;
+            border-radius: 5px;
+            height: 100%;      /* Ocupa toda a célula */
+            overflow-y: auto;  /* SCROLL AQUI! */
+        }
+        
+        /* Estilo da Lista Interativa */
+        .list-item-selectable {
+            padding: 8px 12px;
+            border-bottom: 1px solid #333;
+            cursor: pointer;
+            transition: background 0.1s;
+        }
+        .list-item-selectable:hover { background: #333; }
+        .list-item-selectable.active { 
+            background: var(--cor-destaque, #d23030); 
+            color: white;
+            font-weight: bold;
+        }
+        .list-item-selectable .auto-titulo { font-size: 1em; margin: 0; color: inherit; }
+        
+        /* Classes automáticas internas */
+        .auto-titulo { color: var(--cor-destaque, #d23030); font-weight: bold; font-size: 1.4em; margin: 0 0 10px 0; }
+        .auto-texto { margin: 5px 0; font-size: 0.95em; line-height: 1.4; }
+        .auto-imagem { width: 100%; border-radius: 4px; margin-bottom: 10px; }
+        .auto-divisor { border: 0; border-top: 1px solid #444; margin: 10px 0; }
+        
+        /* Tabela dentro do Card */
+        .tabela-padrao { width: 100%; border-collapse: collapse; font-size: 0.9em; }
+        .tabela-padrao th { text-align: left; border-bottom: 2px solid #555; padding: 5px; color: #aaa; }
+        .tabela-padrao td { border-bottom: 1px solid #333; padding: 6px 5px; }
         
