@@ -1,1 +1,115 @@
-{"card_rpg": "<div class=\"auto-card card_rpg\"><h3 class=\"auto-titulo text-destaque\">{{0}}</h3><h4 class=\"auto-subtitulo \">{{1}}</h4><p class=\"auto-texto \"><strong>N\u00edvel:</strong>{{2}}</p><p class=\"auto-texto \"><strong>Classe:</strong>{{3}}</p><span class=\"auto-etiqueta badge\">{{4}}</span><hr class=\"\"></div>", "loja_simples": "<div class=\"auto-card loja_simples\"><h3 class=\"auto-titulo \">{{0}}</h3><p class=\"auto-texto cor-ouro\"><strong></strong>{{1}}</p></div>", "item_linha": "<div class=\"auto-card item_linha\"><p class=\"auto-texto col-nome\"><strong></strong>{{0}}</p><span class=\"auto-etiqueta col-tipo\">{{1}}</span><span class=\"auto-etiqueta col-raridade\">{{2}}</span></div>", "item_full": "<div class=\"auto-card item_full\"><h3 class=\"auto-titulo titulo-item\">{{0}}</h3><h4 class=\"auto-subtitulo italico\">{{1}}</h4><hr class=\"\"> {{2}}</div>"}
+{
+    "card_rpg": [
+        {
+            "nome_template": "card_rpg",
+            "tipo_elemento": "titulo",
+            "usa_variavel": "VERDADEIRO",
+            "texto_antes": "",
+            "classe_extra": "text-destaque"
+        },
+        {
+            "nome_template": "card_rpg",
+            "tipo_elemento": "subtitulo",
+            "usa_variavel": "VERDADEIRO",
+            "texto_antes": "",
+            "classe_extra": ""
+        },
+        {
+            "nome_template": "card_rpg",
+            "tipo_elemento": "texto",
+            "usa_variavel": "VERDADEIRO",
+            "texto_antes": "Nível:",
+            "classe_extra": ""
+        },
+        {
+            "nome_template": "card_rpg",
+            "tipo_elemento": "texto",
+            "usa_variavel": "VERDADEIRO",
+            "texto_antes": "Classe:",
+            "classe_extra": ""
+        },
+        {
+            "nome_template": "card_rpg",
+            "tipo_elemento": "etiqueta",
+            "usa_variavel": "VERDADEIRO",
+            "texto_antes": "",
+            "classe_extra": "badge"
+        },
+        {
+            "nome_template": "card_rpg",
+            "tipo_elemento": "divisor",
+            "usa_variavel": "FALSO",
+            "texto_antes": "",
+            "classe_extra": ""
+        }
+    ],
+    "loja_simples": [
+        {
+            "nome_template": "loja_simples",
+            "tipo_elemento": "titulo",
+            "usa_variavel": "VERDADEIRO",
+            "texto_antes": "",
+            "classe_extra": ""
+        },
+        {
+            "nome_template": "loja_simples",
+            "tipo_elemento": "texto",
+            "usa_variavel": "VERDADEIRO",
+            "texto_antes": "",
+            "classe_extra": "cor-ouro"
+        }
+    ],
+    "item_linha": [
+        {
+            "nome_template": "item_linha",
+            "tipo_elemento": "texto",
+            "usa_variavel": "VERDADEIRO",
+            "texto_antes": "",
+            "classe_extra": "col-nome"
+        },
+        {
+            "nome_template": "item_linha",
+            "tipo_elemento": "etiqueta",
+            "usa_variavel": "VERDADEIRO",
+            "texto_antes": "",
+            "classe_extra": "col-tipo"
+        },
+        {
+            "nome_template": "item_linha",
+            "tipo_elemento": "etiqueta",
+            "usa_variavel": "VERDADEIRO",
+            "texto_antes": "",
+            "classe_extra": "col-raridade"
+        }
+    ],
+    "item_full": [
+        {
+            "nome_template": "item_full",
+            "tipo_elemento": "titulo",
+            "usa_variavel": "VERDADEIRO",
+            "texto_antes": "",
+            "classe_extra": "titulo-item"
+        },
+        {
+            "nome_template": "item_full",
+            "tipo_elemento": "subtitulo",
+            "usa_variavel": "VERDADEIRO",
+            "texto_antes": "",
+            "classe_extra": "italico"
+        },
+        {
+            "nome_template": "item_full",
+            "tipo_elemento": "divisor",
+            "usa_variavel": "FALSO",
+            "texto_antes": "",
+            "classe_extra": ""
+        },
+        {
+            "nome_template": "item_full",
+            "tipo_elemento": "tabela_dinamica",
+            "usa_variavel": "VERDADEIRO",
+            "texto_antes": "",
+            "classe_extra": "texto-longo"
+        }
+    ]
+}
