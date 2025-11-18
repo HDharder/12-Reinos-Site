@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12 Reinos - Compêndio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar">
+        <a class="navbar-brand" onclick="mostrarHome()">🐲 12 Reinos</a>
+        <div class="nav-links" id="nav-links-container">
+            </div>
+    </nav>
+
+    <div id="main-container">
+        
+        <div id="view-home" class="home-grid">
+            </div>
+
+        <div id="view-data" class="hidden">
+            <div class="table-controls">
+                <input type="text" id="search-box" class="search-input" placeholder="🔍 Buscar na tabela..." onkeyup="filtrarDados()">
+            </div>
+            <div id="table-wrapper">
+                </div>
+        </div>
+
+    </div>
+
+    <!--<script src="app.js"></script>-->
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
