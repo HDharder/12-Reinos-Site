@@ -1,276 +1,56 @@
 /* CSS Gerado */
 
-:root {
-  --cor-fundo-principal: #121212;
-  --cor-navbar: #1a1a1a;
-  --cor-destaque: #d23030;
-  --cor-texto: #e0e0e0;
-  --borda-cards: 1px solid #444;
-  --arredondamento: 8px;
-  --tamanho-fonte: 14px;
-  --animacao-hover: translateY(-5px);
-  --imagem-fundo: none;
-}
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-body {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  background-color: var(--cor-fundo-principal);
-  color: var(--cor-texto);
-  font-size: var(--tamanho-fonte);
-  font-family: var(--font-main);
-  background-image: var(--imagem-fundo);
-  background-size: cover;
-  background-attachment: fixed;
-}
-.navbar {
-  display: flex;
-  align-items: center;
-  height: 50px;
-  padding: 0 20px;
-  background-color: var(--cor-navbar);
-  border-bottom: 1px solid var(--borda-cards);
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.5);
-}
-.navbar-brand {
-  color: var(--cor-destaque);
-  font-size: 18px;
-  font-weight: bold;
-  cursor: pointer;
-  text-decoration: none;
-  margin-right: 30px;
-}
-.nav-links {
-  display: flex;
-  gap: 5px;
-}
-.nav-btn {
-  padding: 8px 12px;
-  color: var(--text-main);
-  border: none;
-  border-radius: 4px;
-  font-size: 13px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background 0.2s;
-  text-transform: uppercase;
-  background: none;
-}
-.nav-btn:hover {
-  border: 1px solid var(--cor-destaque);
-}
-.nav-btn.active {
-  background-color: var(--cor-destaque);
-  color: white;
-}
-#main-container {
-  width: 100%;
-  max-width: 1600px;
-  margin: 0 auto;
-  padding: 20px;
-  overflow-y: auto;
-  flex: 1;
-}
-.home-grid {
-  display: grid;
-  gap: 15px;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  padding-top: 40px;
-}
-.home-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 120px;
-  padding: 20px;
-  background-color: var(--cor-card);
-  border: var(--borda-cards);
-  border-radius: var(--arredondamento);
-  text-align: center;
-  cursor: pointer;
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-.home-card:hover {
-  transform: var(--animacao-hover);
-  border-color: var(--cor-destaque);
-}
-.home-card h3 {
-  margin: 0 0 5px 0;
-  color: var(--cor-destaque);
-  font-size: 18px;
-}
-.home-card p {
-  color: var(--text-muted);
-  font-size: 12px;
-}
-.table-controls {
-  display: flex;
-  gap: 10px;
-  margin: 0 0 15px 0;
-}
-.search-input {
-  width: 100%;
-  max-width: 400px;
-  max-height: 600px;
-  padding: 8px 12px;
-  background-color: #111;
-  color: white;
-  border: 1px solid var(--border);
-  border-radius: 4px;
-}
-table {
-  width: 100%;
-  background-color: #2b2b2b;
-  border-radius: 3px;
-  overflow: auto;
-  border-collapse: collapse;
-}
-thead {
-  background-color: #3a3a3a;
-  border-bottom: 2px solid var(--border);
-}
-th {
-  padding: 10px;
-  color: var(--cor-destaque);
-  font-size: 12px;
-  font-weight: bold;
-  text-align: left;
-  cursor: pointer;
-  text-transform: uppercase;
-}
-td {
-  padding: 8px 10px;
-  color: #ddd;
-  border-bottom: 1px solid #333;
-}
-tr:nth-child(even) {
-  background-color: #303030;
-}
-tr:hover {
-  background-color: #444;
-}
-.hidden {
-  display: none !important;
-}
+:root { --cor-fundo-principal: #121212; }
+:root { --cor-navbar: #1a1a1a; }
+:root { --cor-destaque: #d23030; }
+:root { --cor-texto: #e0e0e0; }
+:root { --borda-cards: 1px solid #444; }
+:root { --arredondamento: 8px; }
+:root { --tamanho-fonte: 14px; }
+:root { --animacao-hover: translateY(-5px); }
+:root { --imagem-fundo: none; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { display: flex; flex-direction: column; height: 100vh; background-color: var(--cor-fundo-principal); color: var(--cor-texto); font-size: var(--tamanho-fonte); font-family: var(--font-main); background-image: var(--imagem-fundo); background-size: cover; background-attachment: fixed; }
+.navbar { display: flex; align-items: center; height: 50px; padding: 0 20px; background-color: var(--cor-navbar); border-bottom: 1px solid var(--borda-cards); position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 5px rgba(0,0,0,0.5); }
+.navbar-brand { color: var(--cor-destaque); font-size: 18px; font-weight: bold; cursor: pointer; text-decoration: none; margin-right: 30px; }
+.nav-links { display: flex; gap: 5px; }
+.nav-btn { padding: 8px 12px; color: var(--text-main); border: none; border-radius: 4px; font-size: 13px; font-weight: bold; cursor: pointer; transition: background 0.2s; text-transform: uppercase; background: none; }
+.nav-btn:hover { border: 1px solid var(--cor-destaque); }
+.nav-btn.active { background-color: var(--cor-destaque); color: white; }
+#main-container { width: 100%; max-width: 1600px; margin: 0 auto; padding: 20px; overflow-y: auto; flex: 1; }
+.home-grid { display: grid; gap: 15px; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); padding-top: 40px; }
+.home-card { display: flex; flex-direction: column; align-items: center; justify-content: center; height: 120px; padding: 20px; background-color: var(--cor-card); border: var(--borda-cards); border-radius: var(--arredondamento); text-align: center; cursor: pointer; transition: transform 0.2s, box-shadow 0.2s; }
+.home-card:hover { transform: var(--animacao-hover); border-color: var(--cor-destaque); }
+.home-card h3 { margin: 0 0 5px 0; color: var(--cor-destaque); font-size: 18px; }
+.home-card p { color: var(--text-muted); font-size: 12px; }
+.table-controls { display: flex; gap: 10px; margin: 0 0 15px 0; }
+.search-input { width: 100%; max-width: 400px; max-height: 600px; padding: 8px 12px; background-color: #111; color: white; border: 1px solid var(--border); border-radius: 4px; }
+table { width: 100%; background-color: #2b2b2b; border-radius: 3px; overflow: auto; border-collapse: collapse; }
+thead { background-color: #3a3a3a; border-bottom: 2px solid var(--border); }
+th { padding: 10px; color: var(--cor-destaque); font-size: 12px; font-weight: bold; text-align: left; cursor: pointer; text-transform: uppercase; }
+td { padding: 8px 10px; color: #ddd; border-bottom: 1px solid #333; }
+tr:nth-child(even) { background-color: #303030; }
+tr:hover { background-color: #444; }
+.hidden { display: none !important; }
 
-        /* --- RESET E ESTRUTURA --- */
-        html, body { 
-            height: 100%; 
-            margin: 0; 
-            padding: 0; 
-            overflow: hidden; /* Trava a janela principal */
-            background-color: var(--cor-fundo-principal, #222);
-            font-family: var(--font-main, sans-serif);
-            color: var(--cor-texto, #ccc);
-        }
-
+        html, body { height: 100%; margin: 0; padding: 0; overflow: hidden; background: var(--cor-fundo-principal, #222); color: var(--cor-texto, #ccc); font-family: sans-serif; }
         .hidden { display: none !important; }
-
-        #main-container {
-            /* Ocupa exatamente o que sobra abaixo da navbar */
-            height: calc(100vh - 50px); 
-            width: 100%;
-            overflow: auto;
-        }
-
-        /* --- GRID LAYOUT ROBUSTO --- */
-        .page-grid-container {
-            display: grid;
-            gap: 10px;
-            padding: 10px;
-            width: 100%;
-            height: 100%;
-            /* Força as linhas a respeitarem o tamanho, sem estourar */
-            grid-auto-rows: minmax(0, 1fr); 
-            box-sizing: border-box;
-        }
-
-        /* A Célula do Grid (O Pai do Scroll) */
-        .component-wrapper {
-            position: relative;
-            display: flex;        /* Garante que o filho ocupe tudo */
-            flex-direction: column;
-            height: 100%;
-            width: 100%;
-            min-height: 0;        /* OBRIGATÓRIO para scroll em Grid */
-            max-height: 1000px;
-            min-width: 0;
-            overflow: hidden;     /* O scroll é no filho, não aqui */
-        }
-
-        /* --- CONTEÚDOS COM SCROLL --- */
-        /* Tanto o Card quanto a Lista usam esta lógica */
-        .auto-card, 
-        .interactive-list-container {
-            flex: 1;              /* Cresce para ocupar o wrapper */
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            padding: 15px;
-            border: 1px solid #444;
-            background: #222;
-            border-radius: 5px;
-            
-            /* A MÁGICA DO SCROLL */
-            height: 100%;
-            overflow-y: auto;     /* Scroll Vertical Ativo */
-            overflow-x: hidden;
-            box-sizing: border-box;
-        }
-        
-        /* Ajuste específico para lista: remove padding excessivo se quiser */
-        .interactive-list-container {
-            padding: 0; 
-            background: #1a1a1a; /* Um pouco mais escuro para diferenciar */
-        }
-
-        /* --- ESTILO DA LISTA --- */
-        .list-item-selectable {
-            padding: 12px 15px;
-            border-bottom: 1px solid #333;
-            cursor: pointer;
-            transition: background 0.1s;
-            flex-shrink: 0; /* Impede que o item seja esmagado */
-        }
-        
+        #main-container { height: calc(100vh - 50px); width: 100%; overflow: auto; position: relative; }
+        .page-grid-container { display: grid; gap: 10px; padding: 10px; width: 100%; height: 100%; grid-auto-rows: minmax(0, 1fr); box-sizing: border-box; }
+        .component-wrapper { position: relative; display: flex; flex-direction: column; height: 100%; width: 100%; min-height: 0; min-width: 0; max-height: 1000px; overflow: auto; }
+        .auto-card, .interactive-list-container { flex: 1; display: flex; flex-direction: column; gap: 10px; padding: 15px; border: 1px solid #444; background: #222; border-radius: 5px; height: 100%; overflow-y: auto; overflow-x: hidden; box-sizing: border-box; }
+        .interactive-list-container { padding: 0; background: #1a1a1a; }
+        .list-item-selectable { padding: 12px 15px; border-bottom: 1px solid #333; cursor: pointer; transition: background 0.1s; flex-shrink: 0; text-decoration: none; color: inherit; display: block; }
         .list-item-selectable:hover { background: #252525; }
-        
-        .list-item-selectable.active { 
-            background: var(--cor-destaque, #d23030); 
-            color: white;
-        }
-        
-        /* Títulos dentro da lista */
-        .list-item-selectable .auto-titulo { font-size: 1em; margin: 0; }
-        .list-item-selectable .auto-texto { font-size: 0.85em; margin: 0; color: #888; }
-        .list-item-selectable.active .auto-texto { color: #eee; }
-
-        /* --- SCROLLBAR (Webkit) --- */
+        .list-item-selectable.active { background: var(--cor-destaque, #d23030); color: white; }
+        .auto-titulo { color: var(--cor-destaque, #d23030); font-weight: bold; font-size: 1.4em; margin: 0 0 10px 0; }
+        .auto-subtitulo { color: #888; font-size: 0.9em; font-style: italic; margin-bottom: 10px; }
+        .auto-imagem { width: 100%; border-radius: 4px; margin-bottom: 10px; display: block; }
+        .table-responsive { width: 100%; overflow-x: auto; }
+        table { width: 100%; border-collapse: collapse; font-size: 0.9em; }
+        th { text-align: left; border-bottom: 2px solid #555; padding: 8px; background: #1a1a1a; position: sticky; top: 0; z-index: 10; }
+        td { border-bottom: 1px solid #333; padding: 8px; }
         ::-webkit-scrollbar { width: 8px; height: 8px; }
         ::-webkit-scrollbar-track { background: #111; }
         ::-webkit-scrollbar-thumb { background: #444; border-radius: 4px; }
-        ::-webkit-scrollbar-thumb:hover { background: #666; }
-
-        /* --- ELEMENTOS INTERNOS --- */
-        .auto-titulo { color: var(--cor-destaque, #d23030); font-weight: bold; font-size: 1.4em; margin: 0 0 10px 0; line-height: 1.2; }
-        .auto-subtitulo { color: #888; font-size: 0.9em; font-style: italic; margin-bottom: 10px; }
-        .auto-texto { margin: 5px 0; line-height: 1.5; }
-        .auto-imagem { width: 100%; border-radius: 4px; margin-bottom: 10px; object-fit: cover; }
-        .auto-divisor { border: 0; border-top: 1px solid #444; margin: 15px 0; width: 100%; }
-
-        /* Tabelas */
-        .table-responsive { width: 100%; overflow-x: auto; margin-top: 10px; }
-        .tabela-padrao { width: 100%; border-collapse: collapse; font-size: 0.9em; }
-        .tabela-padrao th { text-align: left; border-bottom: 2px solid #555; padding: 8px; background: #1a1a1a; position: sticky; top: 0; z-index: 10; }
-        .tabela-padrao td { border-bottom: 1px solid #333; padding: 8px; }
-        .tabela-padrao tr:hover { background: #333; }
         
