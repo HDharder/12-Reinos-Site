@@ -5,22 +5,127 @@
 
 /* --- Estilos da Planilha --- */
 body {
-    background-color: #121212;
-    color: #cccccc;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--cor-fundo-principal);
+    color: var(--cor-texto);
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+}
+#main-container {
+    display: block;
+    width: 100%;
+    padding: 20px;
+    margin: 0 auto;
 }
 .navbar {
-    background-color: #000000;
-    border: 1px solid #333;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    background-color: var(--cor-navbar);
+    border-bottom: 1px solid #444;
+    padding: 0 20px;
+    transition: background 0.2s;
 }
-.card {
-    background-color: #1e1e1e;
+.nav-links {
+    display: flex;
+}
+.home-grid {
+    display: grid;
+    width: 100%;
+    padding: 40px 0 0 0;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+.home-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 120px;
+    background-color: var(--cor-card);
+    border: var(--borda-cards);
+    border-radius: var(--arredondamento);
+    padding: 20px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.home-card:hover {
+    border: 1px solid var(--cor-destaque);
+    transform: var(--animacao-hover);
+}
+.home-card h3 {
+    color: var(--cor-destaque);
+    margin: 0 0 5px 0;
+    font-size: 18px;
+}
+.home-card p {
+    color: #888;
+    font-size: 12px;
+}
+.table-controls {
+    display: flex;
+    width: 100%;
+    margin: 0 0 15px 0;
+}
+.navbar-brand {
+    color: var(--cor-destaque);
+    margin: 0 30px 0 0;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.nav-btn {
+    background-color: transparent;
+    color: var(--cor-texto);
+    border: none;
+    border-radius: 4px;
+    padding: 8px 12px;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.nav-btn:hover {
+    background-color: #444;
+    color: white;
+}
+.nav-btn.active {
+    background-color: var(--cor-destaque);
+    color: white;
+}
+.search-input {
+    background-color: #111;
+    color: white;
     border: 1px solid #444;
-    padding: 15px;
-    border-radius: 8px;
+    border-radius: 4px;
+    padding: 8px 12px;
 }
-.card:hover {
-    border: 1px solid red;
+table {
+    background-color: #2b2b2b;
+    border-radius: 3px;
 }
-h3 {
-    color: #d23030;
+thead {
+    background-color: #3a3a3a;
+    border-bottom: 2px solid #444;
+}
+th {
+    color: var(--cor-destaque);
+    padding: 10px;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+}
+td {
+    color: #ddd;
+    border-bottom: 1px solid #333;
+    padding: 8px 10px;
+}
+tr:nth-child(even) {
+    background-color: #303030;
+}
+tr:hover {
+    background-color: #444;
 }
