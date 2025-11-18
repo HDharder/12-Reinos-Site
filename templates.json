@@ -1,4 +1,4 @@
 {
     "card_rpg": "<div class=\"auto-card card_rpg\"><h3 class=\"auto-titulo text-destaque\">{{0}}</h3><h4 class=\"auto-subtitulo \">{{1}}</h4><p class=\"auto-texto \"><strong>Nível:</strong>{{2}}</p><p class=\"auto-texto \"><strong>Classe:</strong>{{3}}</p><div><span class=\"auto-etiqueta badge\">{{4}}</span></div><hr class=\"auto-divisor \"></div>",
-    "loja_simples": "<div class=\"auto-card loja_simples\"><h3 class=\"auto-titulo \">{{0}}</h3><p class=\"auto-texto cor-ouro\"><strong>Custa:</strong>{{1}}</p></div>"
+    "loja_simples": "<div class=\"auto-card loja_simples\"><h3 class=\"auto-titulo \">{{0}}</h3><p class=\"auto-texto cor-ouro\"><strong></strong>{{1}}</p></div>"
 }
