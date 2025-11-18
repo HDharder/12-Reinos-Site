@@ -1,0 +1,5 @@
+{
+    "card_personagem": "<div class=\"card\"><h3>{{Nome}}</h3><p>Classe: {{Classe}}</p><p>Nível: {{Nivel}}</p></div>",
+    "card_loja": "<div class=\"card\"><h3>{{Loja}}</h3><p style=\"color:gold\">{{Preco}} PO</p><i>{{Tipo}}</i></div>",
+    "lista_simples": "<li class=\"item-lista\"><strong>{{Nome}}</strong> - {{Descricao}}</li>"
+}
