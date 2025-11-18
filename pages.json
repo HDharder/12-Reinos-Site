@@ -10,11 +10,13 @@
         "structure": [
             {
                 "template": "item_full",
-                "area": "1 / 1 / 9 / 6"
+                "area": "1 / 1 / 9 / 6",
+                "role": "painel"
             },
             {
                 "template": "item_linha",
-                "area": "1 / 6 / 9 / 11"
+                "area": "1 / 6 / 9 / 11",
+                "role": "lista"
             }
         ]
     }
