@@ -1,14 +1,26 @@
 [
     {
+        "nome_menu": "Itens",
+        "arquivo_json": "dados/Inventario.json",
+        "modo_pagina": "split",
+        "template_lista": "item_linha",
+        "template_detalhe": "item_full",
+        "variaveis": "Personagem, {Total} PO, Level"
+    },
+    {
         "nome_menu": "Personagens",
         "arquivo_json": "dados/personagens.json",
-        "tipo_exibicao": "card_rpg",
+        "modo_pagina": "grid",
+        "template_lista": "",
+        "template_detalhe": "card_rpg",
         "variaveis": "Personagem, Classe, Level"
     },
     {
         "nome_menu": "Lojas",
         "arquivo_json": "dados/Lojas.json",
-        "tipo_exibicao": "loja_simples",
+        "modo_pagina": "tabela",
+        "template_lista": "",
+        "template_detalhe": "loja_simples",
         "variaveis": "tipo de loja, possibilidades"
     }
 ]
