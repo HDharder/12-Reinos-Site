@@ -1,0 +1,17 @@
+{
+    "itens.html": {
+        "configIndex": 0,
+        "title": "Itens",
+        "slug": "itens"
+    },
+    "personagens.html": {
+        "configIndex": 1,
+        "title": "Personagens",
+        "slug": "personagens"
+    },
+    "lojas.html": {
+        "configIndex": 2,
+        "title": "Lojas",
+        "slug": "lojas"
+    }
+}
