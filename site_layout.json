@@ -1,1 +1,20 @@
-[{"nome_menu": "Itens", "arquivo_json": "dados/Inventario.json", "page_layout": "", "variaveis": "PERSONAGEM, {Total} PO, JOGADOR"}, {"nome_menu": "Personagens", "arquivo_json": "dados/personagens.json", "page_layout": "layout_pj", "variaveis": "Personagem, Classe, Level, Personagem, Classe, Level"}, {"nome_menu": "Lojas", "arquivo_json": "dados/Lojas.json", "page_layout": "", "variaveis": "tipo de loja, possibilidades"}]
+[
+    {
+        "nome_menu": "Itens",
+        "arquivo_json": "dados/Inventario.json",
+        "page_layout": "",
+        "variaveis": "PERSONAGEM, {Total} PO, JOGADOR"
+    },
+    {
+        "nome_menu": "Personagens",
+        "arquivo_json": "dados/personagens.json",
+        "page_layout": "layout_pj",
+        "variaveis": "Personagem, Classe, Level, Personagem, Classe, Level"
+    },
+    {
+        "nome_menu": "Lojas",
+        "arquivo_json": "dados/Lojas.json",
+        "page_layout": "",
+        "variaveis": "tipo de loja, possibilidades"
+    }
+]
