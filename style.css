@@ -1,9 +1,17 @@
+/* CSS Gerado Automaticamente */
 
-/* CSS Base gerado automaticamente */
-* { box-sizing: border-box; margin: 0; padding: 0; }
-.hidden { display: none !important; }
+:root {
+    --cor-fundo-principal: #121212;
+    --cor-navbar: #1a1a1a;
+    --cor-destaque: #d23030;
+    --cor-texto: #e0e0e0;
+    --borda-cards: 1px solid #444;
+    --arredondamento: 8px;
+    --tamanho-fonte: 14px;
+    --animacao-hover: translateY(-5px);
+    --imagem-fundo: none;
+}
 
-/* --- Estilos da Planilha --- */
 body {
     display: flex;
     flex-direction: column;
@@ -129,3 +137,5 @@ tr:nth-child(even) {
 tr:hover {
     background-color: #444;
 }
+
+.hidden { display: none !important; }
