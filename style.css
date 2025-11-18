@@ -12,41 +12,79 @@
     --imagem-fundo: none;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 body {
     display: flex;
     flex-direction: column;
-    width: 100%;
     height: 100vh;
     background-color: var(--cor-fundo-principal);
     color: var(--cor-texto);
-    padding: 0;
-    margin: 0;
-    font-size: 14px;
-}
-#main-container {
-    display: block;
-    width: 100%;
-    padding: 20px;
-    margin: 0 auto;
+    font-size: var(--tamanho-fonte);
+    font-family: var(--font-main);
+    background-image: var(--imagem-fundo);
+    background-size: cover;
+    background-attachment: fixed;
 }
 .navbar {
     display: flex;
     align-items: center;
-    width: 100%;
     height: 50px;
-    background-color: var(--cor-navbar);
-    border-bottom: 1px solid #444;
     padding: 0 20px;
-    transition: background 0.2s;
+    background-color: var(--cor-navbar);
+    border-bottom: 1px solid var(--borda-cards);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+.navbar-brand {
+    color: var(--cor-destaque);
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    margin-right: 30px;
 }
 .nav-links {
     display: flex;
+    gap: 5px;
+}
+.nav-btn {
+    padding: 8px 12px;
+    color: var(--text-main);
+    border: none;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+    text-transform: uppercase;
+    background: none;
+}
+.nav-btn:hover {
+    border: 1px solid var(--cor-destaque);
+}
+.nav-btn.active {
+    background-color: var(--cor-destaque);
+    color: white;
+}
+#main-container {
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 20px;
+    overflow-y: auto;
+    flex: 1;
 }
 .home-grid {
     display: grid;
-    width: 100%;
-    padding: 40px 0 0 0;
+    gap: 15px;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    padding-top: 40px;
 }
 .home-card {
     display: flex;
@@ -54,88 +92,74 @@ body {
     align-items: center;
     justify-content: center;
     height: 120px;
+    padding: 20px;
     background-color: var(--cor-card);
     border: var(--borda-cards);
     border-radius: var(--arredondamento);
-    padding: 20px;
+    text-align: center;
     cursor: pointer;
     transition: transform 0.2s, box-shadow 0.2s;
 }
 .home-card:hover {
-    border: 1px solid var(--cor-destaque);
     transform: var(--animacao-hover);
+    border-color: var(--cor-destaque);
 }
 .home-card h3 {
-    color: var(--cor-destaque);
     margin: 0 0 5px 0;
+    color: var(--cor-destaque);
     font-size: 18px;
 }
 .home-card p {
-    color: #888;
+    color: var(--text-muted);
     font-size: 12px;
 }
 .table-controls {
     display: flex;
-    width: 100%;
+    gap: 10px;
     margin: 0 0 15px 0;
 }
-.navbar-brand {
-    color: var(--cor-destaque);
-    margin: 0 30px 0 0;
-    font-size: 18px;
-    font-weight: bold;
-    cursor: pointer;
-}
-.nav-btn {
-    background-color: transparent;
-    color: var(--cor-texto);
-    border: none;
-    border-radius: 4px;
-    padding: 8px 12px;
-    font-size: 13px;
-    font-weight: bold;
-    cursor: pointer;
-}
-.nav-btn:hover {
-    background-color: #444;
-    color: white;
-}
-.nav-btn.active {
-    background-color: var(--cor-destaque);
-    color: white;
-}
 .search-input {
+    width: 100%;
+    max-width: 400px;
+    padding: 8px 12px;
     background-color: #111;
     color: white;
-    border: 1px solid #444;
+    border: 1px solid var(--border);
     border-radius: 4px;
-    padding: 8px 12px;
 }
 table {
+    width: 100%;
     background-color: #2b2b2b;
     border-radius: 3px;
+    overflow: hidden;
+    border-collapse: collapse;
 }
 thead {
     background-color: #3a3a3a;
-    border-bottom: 2px solid #444;
+    border-bottom: 2px solid var(--border);
 }
 th {
-    color: var(--cor-destaque);
     padding: 10px;
+    color: var(--cor-destaque);
     font-size: 12px;
     font-weight: bold;
+    text-align: left;
     cursor: pointer;
+    text-transform: uppercase;
 }
 td {
+    padding: 8px 10px;
     color: #ddd;
     border-bottom: 1px solid #333;
-    padding: 8px 10px;
 }
 tr:nth-child(even) {
     background-color: #303030;
 }
 tr:hover {
     background-color: #444;
+}
+.hidden {
+    display: none !important;
 }
 
 .hidden { display: none !important; }
