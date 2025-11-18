@@ -179,7 +179,7 @@ tr:hover {
             /* Ocupa exatamente o que sobra abaixo da navbar */
             height: calc(100vh - 50px); 
             width: 100%;
-            overflow: hidden;
+            overflow: auto;
         }
 
         /* --- GRID LAYOUT ROBUSTO --- */
@@ -202,6 +202,7 @@ tr:hover {
             height: 100%;
             width: 100%;
             min-height: 0;        /* OBRIGATÓRIO para scroll em Grid */
+            max-height: 1000px;
             min-width: 0;
             overflow: hidden;     /* O scroll é no filho, não aqui */
         }
