@@ -65,7 +65,7 @@
     "tabela_dinamica": {
         "nome_objeto": "tabela_dinamica",
         "tag": "table",
-        "classes": "tabela-padrao",
+        "classes": "table table-striped",
         "conteudo": "__SMART_TABLE__",
         "atributos": ""
     },
