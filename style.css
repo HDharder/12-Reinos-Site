@@ -1,188 +1,180 @@
 /* CSS Gerado */
 
 :root {
-    --cor-fundo-principal: #121212;
-    --cor-navbar: #1a1a1a;
-    --cor-destaque: #d23030;
-    --cor-texto: #e0e0e0;
-    --borda-cards: 1px solid #444;
-    --arredondamento: 8px;
-    --tamanho-fonte: 14px;
-    --animacao-hover: translateY(-5px);
-    --imagem-fundo: none;
+  --cor-fundo-principal: #121212;
+  --cor-navbar: #1a1a1a;
+  --cor-destaque: #d23030;
+  --cor-texto: #e0e0e0;
+  --borda-cards: 1px solid #444;
+  --arredondamento: 8px;
+  --tamanho-fonte: 14px;
+  --animacao-hover: translateY(-5px);
+  --imagem-fundo: none;
 }
-
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 body {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    background-color: var(--cor-fundo-principal);
-    color: var(--cor-texto);
-    font-size: var(--tamanho-fonte);
-    font-family: var(--font-main);
-    background-image: var(--imagem-fundo);
-    background-size: cover;
-    background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: var(--cor-fundo-principal);
+  color: var(--cor-texto);
+  font-size: var(--tamanho-fonte);
+  font-family: var(--font-main);
+  background-image: var(--imagem-fundo);
+  background-size: cover;
+  background-attachment: fixed;
 }
 .navbar {
-    display: flex;
-    align-items: center;
-    height: 50px;
-    padding: 0 20px;
-    background-color: var(--cor-navbar);
-    border-bottom: 1px solid var(--borda-cards);
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  height: 50px;
+  padding: 0 20px;
+  background-color: var(--cor-navbar);
+  border-bottom: 1px solid var(--borda-cards);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.5);
 }
 .navbar-brand {
-    color: var(--cor-destaque);
-    font-size: 18px;
-    font-weight: bold;
-    cursor: pointer;
-    text-decoration: none;
-    margin-right: 30px;
+  color: var(--cor-destaque);
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  margin-right: 30px;
 }
 .nav-links {
-    display: flex;
-    gap: 5px;
+  display: flex;
+  gap: 5px;
 }
 .nav-btn {
-    padding: 8px 12px;
-    color: var(--text-main);
-    border: none;
-    border-radius: 4px;
-    font-size: 13px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background 0.2s;
-    text-transform: uppercase;
-    background: none;
+  padding: 8px 12px;
+  color: var(--text-main);
+  border: none;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+  text-transform: uppercase;
+  background: none;
 }
 .nav-btn:hover {
-    border: 1px solid var(--cor-destaque);
+  border: 1px solid var(--cor-destaque);
 }
 .nav-btn.active {
-    background-color: var(--cor-destaque);
-    color: white;
+  background-color: var(--cor-destaque);
+  color: white;
 }
 #main-container {
-    width: 100%;
-    max-width: 1600px;
-    margin: 0 auto;
-    padding: 20px;
-    overflow-y: auto;
-    flex: 1;
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 20px;
+  overflow-y: auto;
+  flex: 1;
 }
 .home-grid {
-    display: grid;
-    gap: 15px;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    padding-top: 40px;
+  display: grid;
+  gap: 15px;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  padding-top: 40px;
 }
 .home-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 120px;
-    padding: 20px;
-    background-color: var(--cor-card);
-    border: var(--borda-cards);
-    border-radius: var(--arredondamento);
-    text-align: center;
-    cursor: pointer;
-    transition: transform 0.2s, box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 120px;
+  padding: 20px;
+  background-color: var(--cor-card);
+  border: var(--borda-cards);
+  border-radius: var(--arredondamento);
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 .home-card:hover {
-    transform: var(--animacao-hover);
-    border-color: var(--cor-destaque);
+  transform: var(--animacao-hover);
+  border-color: var(--cor-destaque);
 }
 .home-card h3 {
-    margin: 0 0 5px 0;
-    color: var(--cor-destaque);
-    font-size: 18px;
+  margin: 0 0 5px 0;
+  color: var(--cor-destaque);
+  font-size: 18px;
 }
 .home-card p {
-    color: var(--text-muted);
-    font-size: 12px;
+  color: var(--text-muted);
+  font-size: 12px;
 }
 .table-controls {
-    display: flex;
-    gap: 10px;
-    margin: 0 0 15px 0;
+  display: flex;
+  gap: 10px;
+  margin: 0 0 15px 0;
 }
 .search-input {
-    width: 100%;
-    max-width: 400px;
-    padding: 8px 12px;
-    background-color: #111;
-    color: white;
-    border: 1px solid var(--border);
-    border-radius: 4px;
+  width: 100%;
+  max-width: 400px;
+  padding: 8px 12px;
+  background-color: #111;
+  color: white;
+  border: 1px solid var(--border);
+  border-radius: 4px;
 }
 table {
-    width: 100%;
-    background-color: #2b2b2b;
-    border-radius: 3px;
-    overflow: hidden;
-    border-collapse: collapse;
+  width: 100%;
+  background-color: #2b2b2b;
+  border-radius: 3px;
+  overflow: hidden;
+  border-collapse: collapse;
 }
 thead {
-    background-color: #3a3a3a;
-    border-bottom: 2px solid var(--border);
+  background-color: #3a3a3a;
+  border-bottom: 2px solid var(--border);
 }
 th {
-    padding: 10px;
-    color: var(--cor-destaque);
-    font-size: 12px;
-    font-weight: bold;
-    text-align: left;
-    cursor: pointer;
-    text-transform: uppercase;
+  padding: 10px;
+  color: var(--cor-destaque);
+  font-size: 12px;
+  font-weight: bold;
+  text-align: left;
+  cursor: pointer;
+  text-transform: uppercase;
 }
 td {
-    padding: 8px 10px;
-    color: #ddd;
-    border-bottom: 1px solid #333;
+  padding: 8px 10px;
+  color: #ddd;
+  border-bottom: 1px solid #333;
 }
 tr:nth-child(even) {
-    background-color: #303030;
+  background-color: #303030;
 }
 tr:hover {
-    background-color: #444;
+  background-color: #444;
 }
 .hidden {
-    display: none !important;
+  display: none !important;
 }
 
-            .hidden { display: none !important; }
-            
-            /* Layouts de Página */
-            .page-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 20px; padding: 20px; }
-            
-            .page-split { display: flex; height: calc(100vh - 60px); overflow: hidden; }
-            .split-list { width: 350px; overflow-y: auto; border-right: 1px solid #444; background: #1a1a1a; }
-            .split-detail { flex: 1; overflow-y: auto; padding: 30px; background: var(--cor-fundo-principal, #222); }
-            
-            /* Estilos dos Itens da Lista (Split) */
-            .list-row { display: flex; justify-content: space-between; padding: 10px; border-bottom: 1px solid #333; cursor: pointer; transition: 0.2s; }
-            .list-row:hover { background: #333; }
-            .list-row.selected { background: var(--cor-destaque, #d23030); color: #fff; }
-            .list-row .auto-texto { font-size: 0.9em; margin: 0; }
-
-            /* Elementos Automáticos (Auto-Card) */
-            .auto-card { display: flex; flex-direction: column; gap: 5px; padding: 15px; border: 1px solid #444; background: #222; border-radius: 5px; }
-            .auto-titulo { margin: 0; color: var(--cor-destaque, #d23030); font-size: 1.5em; font-weight: bold; font-family: serif; }
-            .auto-subtitulo { margin: 0; color: #888; font-size: 0.9em; font-style: italic; margin-bottom: 10px; }
-            .auto-texto { margin: 5px 0; font-size: 1em; line-height: 1.5; }
-            .auto-etiqueta { display: inline-block; background: #444; color: #fff; padding: 2px 8px; border-radius: 4px; font-size: 0.8em; }
-            .auto-imagem { width: 100%; max-width: 400px; height: auto; border-radius: 4px; margin: 10px 0; }
-            .auto-divisor { border: 0; border-top: 2px solid var(--cor-destaque, #d23030); margin: 15px 0; width: 100%; }
-            
+        .hidden { display: none !important; }
+        /* O container da página grid */
+        .page-grid-container {
+            display: grid;
+            gap: 20px;
+            padding: 20px;
+            width: 100%;
+            /* Altura mínima para preencher tela */
+            min-height: calc(100vh - 60px); 
+        }
+        /* Classes automáticas */
+        .auto-card { display: flex; flex-direction: column; gap: 5px; padding: 15px; border: 1px solid #444; background: #222; border-radius: 5px; height: 100%; overflow-y: auto; }
+        .auto-titulo { color: var(--cor-destaque, #d23030); font-weight: bold; font-size: 1.2em; margin: 0; }
+        .auto-subtitulo { color: #888; font-size: 0.9em; margin-bottom: 10px; }
+        .auto-imagem { width: 100%; border-radius: 4px; object-fit: cover; margin-bottom: 10px; }
+        .auto-etiqueta { background: #444; padding: 2px 8px; border-radius: 10px; font-size: 0.8em; display: inline-block; }
+        
