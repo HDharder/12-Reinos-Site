@@ -10,11 +10,11 @@
         "structure": [
             {
                 "template": "item_full",
-                "area": "2 / 1 / 9 / 7"
+                "area": "1 / 1 / 9 / 7"
             },
             {
                 "template": "item_linha",
-                "area": "2 / 7 / 9 / 11"
+                "area": "1 / 7 / 9 / 11"
             }
         ]
     }
