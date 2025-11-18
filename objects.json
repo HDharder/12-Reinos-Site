@@ -41,13 +41,6 @@
         "conteudo": "",
         "atributos": "src=\"{{valor}}\" alt=\"Imagem\""
     },
-    "img_capa": {
-        "nome_objeto": "img_capa",
-        "tag": "img",
-        "classes": "auto-imagem",
-        "conteudo": "",
-        "atributos": "src=\"{{url}}\""
-    },
     "subtitulo": {
         "nome_objeto": "subtitulo",
         "tag": "h4",
@@ -55,19 +48,12 @@
         "conteudo": "{{valor}}",
         "atributos": ""
     },
-    "tabela": {
-        "nome_objeto": "tabela",
-        "tag": "table",
-        "classes": "tabela-padrao",
-        "conteudo": "__SMART_TABLE__",
-        "atributos": ""
-    },
     "tabela_dinamica": {
         "nome_objeto": "tabela_dinamica",
         "tag": "table",
         "classes": "table table-striped",
         "conteudo": "__SMART_TABLE__",
-        "atributos": ""
+        "atributos": "data-signal-select=\"{{signal}}\""
     },
     "texto": {
         "nome_objeto": "texto",
@@ -82,5 +68,12 @@
         "classes": "auto-titulo",
         "conteudo": "{{valor}}",
         "atributos": ""
+    },
+    "texto_clicavel": {
+        "nome_objeto": "texto_clicavel",
+        "tag": "p",
+        "classes": "auto-texto",
+        "conteudo": "{{valor}}",
+        "atributos": "onclick=\"emitSignal('{{signal}}', {{index_item}})\""
     }
 }
