@@ -1,0 +1,21 @@
+{
+    "layout_batalha": {
+        "columns": 12,
+        "rows": 6,
+        "structure": []
+    },
+    "layout_pj": {
+        "columns": 10,
+        "rows": 10,
+        "structure": [
+            {
+                "template": "item_full",
+                "area": "2 / 1 / 9 / 5"
+            },
+            {
+                "template": "item_linha",
+                "area": "2 / 5 / 9 / 11"
+            }
+        ]
+    }
+}
