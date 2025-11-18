@@ -1,4 +1,4 @@
-/* CSS Gerado Automaticamente */
+/* CSS Gerado */
 
 :root {
     --cor-fundo-principal: #121212;
@@ -162,4 +162,12 @@ tr:hover {
     display: none !important;
 }
 
-.hidden { display: none !important; }
+            /* Estilos Automáticos do Construtor */
+            .auto-card { display: flex; flex-direction: column; gap: 5px; padding: 15px; border: 1px solid #444; background: #222; border-radius: 5px; }
+            .auto-titulo { margin: 0; color: var(--cor-destaque, #d23030); font-size: 1.2em; font-weight: bold; }
+            .auto-subtitulo { margin: 0; color: #888; font-size: 0.9em; font-style: italic; margin-bottom: 10px; }
+            .auto-texto { margin: 2px 0; font-size: 0.95em; }
+            .auto-etiqueta { display: inline-block; background: #444; color: #fff; padding: 2px 8px; border-radius: 10px; font-size: 0.8em; margin-top: 5px; }
+            .auto-imagem { width: 100%; height: auto; border-radius: 4px; margin-bottom: 10px; object-fit: cover; }
+            .auto-divisor { border: 0; border-top: 1px solid #444; margin: 10px 0; width: 100%; }
+            
