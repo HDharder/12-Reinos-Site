@@ -1,6 +1,6 @@
 {
     "livros_permitidos": [
-        "xPHB",
+        "XPHB",
         "PHB",
         "XGE",
         "TCE",
@@ -12,7 +12,7 @@
         "Yuan-ti Pureblood"
     ],
     "meta_fontes": {
-        "xPHB": {
+        "XPHB": {
             "rename": "PHB 24",
             "color": "#d4af37"
         },
