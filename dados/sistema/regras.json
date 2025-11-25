@@ -1,0 +1,11 @@
+{
+    "livros_permitidos": [
+        "PHB",
+        "XGE",
+        "TCE"
+    ],
+    "bloqueios": [
+        "Twilight Domain",
+        "Yuan-ti Pureblood"
+    ]
+}
