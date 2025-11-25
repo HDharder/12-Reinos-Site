@@ -1,11 +1,32 @@
 {
     "livros_permitidos": [
         "xPHB",
+        "PHB",
         "XGE",
-        "TCE"
+        "TCE",
+        "GrimHollowPG24",
+        "12Reinos"
     ],
     "bloqueios": [
         "Twilight Domain",
         "Yuan-ti Pureblood"
-    ]
+    ],
+    "meta_fontes": {
+        "xPHB": {
+            "rename": "PHB 24",
+            "color": "#d4af37"
+        },
+        "PHB": {
+            "rename": "PHB 14",
+            "color": "#555555"
+        },
+        "GrimHollowPG24": {
+            "rename": "GH PP 24",
+            "color": "#cf29b3"
+        },
+        "12Reinos": {
+            "rename": "12 Reinos",
+            "color": "#9933cc"
+        }
+    }
 }
