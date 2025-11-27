@@ -5,7 +5,8 @@
         "XGE",
         "TCE",
         "GrimHollowPG24",
-        "12Reinos"
+        "12Reinos",
+        "Artificer"
     ],
     "bloqueios": [
         "Twilight Domain",
@@ -26,6 +27,10 @@
         },
         "12Reinos": {
             "rename": "12 Reinos",
+            "color": "#9933cc"
+        },
+        "Artificer": {
+            "rename": "UA",
             "color": "#9933cc"
         }
     }
