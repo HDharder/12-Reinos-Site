@@ -4,7 +4,7 @@
         "possibilidades":"Compra",
         "tipo de loja":"Distrito de Produção [Estoque]",
         "Tipo_Mercado":"text",
-        "Valid_sell":null
+        "Valid_sell":""
     },
     {
         "ID do mercado":"1435132653753073797",
@@ -25,7 +25,7 @@
         "possibilidades":"Compra",
         "tipo de loja":"Lojas* (O Pavilhão das Mil Brasas) [Estoque]",
         "Tipo_Mercado":"text",
-        "Valid_sell":null
+        "Valid_sell":""
     },
     {
         "ID do mercado":"1437821297102028972",
