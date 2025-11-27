@@ -8,7 +8,8 @@
         "Drop":"Monstro",
         "Drop Rate Base":"",
         "CR Mínimo":"",
-        "Quantidade":""
+        "Quantidade":"",
+        "IMG":"https:\/\/m.media-amazon.com\/images\/I\/71sfw+KU0xL._AC_UF894,1000_QL80_.jpg"
     },
     {
         "Material":"Ferro",
@@ -19,7 +20,8 @@
         "Drop":"Mundo",
         "Drop Rate Base":"",
         "CR Mínimo":"",
-        "Quantidade":""
+        "Quantidade":"",
+        "IMG":""
     },
     {
         "Material":"Madeira",
@@ -30,7 +32,8 @@
         "Drop":"Mundo",
         "Drop Rate Base":"",
         "CR Mínimo":"",
-        "Quantidade":""
+        "Quantidade":"",
+        "IMG":""
     },
     {
         "Material":"Cristal de Mana",
@@ -41,7 +44,8 @@
         "Drop":"Monstro",
         "Drop Rate Base":"35+(2xCR)%",
         "CR Mínimo":"1",
-        "Quantidade":"Máximo: 4 por criatura (equilibre com CR)"
+        "Quantidade":"Máximo: 4 por criatura (equilibre com CR)",
+        "IMG":""
     },
     {
         "Material":"Granadita Ardente",
@@ -52,7 +56,8 @@
         "Drop":"Monstro",
         "Drop Rate Base":"20+CR%",
         "CR Mínimo":"4",
-        "Quantidade":"Máximo: 2 por criatura (acima de CR8)"
+        "Quantidade":"Máximo: 2 por criatura (acima de CR8)",
+        "IMG":""
     },
     {
         "Material":"Turmalina Gélida",
@@ -63,7 +68,8 @@
         "Drop":"Monstro",
         "Drop Rate Base":"20+CR%",
         "CR Mínimo":"4",
-        "Quantidade":"Máximo: 2 por criatura (acima de CR8)"
+        "Quantidade":"Máximo: 2 por criatura (acima de CR8)",
+        "IMG":""
     },
     {
         "Material":"Topázio Voltáico",
@@ -74,7 +80,8 @@
         "Drop":"Monstro",
         "Drop Rate Base":"20+CR%",
         "CR Mínimo":"4",
-        "Quantidade":"Máximo: 2 por criatura (acima de CR8)"
+        "Quantidade":"Máximo: 2 por criatura (acima de CR8)",
+        "IMG":""
     },
     {
         "Material":"Malaquita Corrosiva",
@@ -85,7 +92,8 @@
         "Drop":"Monstro",
         "Drop Rate Base":"20+CR%",
         "CR Mínimo":"4",
-        "Quantidade":"Máximo: 2 por criatura (acima de CR8)"
+        "Quantidade":"Máximo: 2 por criatura (acima de CR8)",
+        "IMG":""
     },
     {
         "Material":"Jade Virulenta",
@@ -96,7 +104,8 @@
         "Drop":"Monstro",
         "Drop Rate Base":"20+CR%",
         "CR Mínimo":"4",
-        "Quantidade":"Máximo: 2 por criatura (acima de CR8)"
+        "Quantidade":"Máximo: 2 por criatura (acima de CR8)",
+        "IMG":""
     },
     {
         "Material":"Ônix Crepuscular",
@@ -107,7 +116,8 @@
         "Drop":"Monstro",
         "Drop Rate Base":"20+CR%",
         "CR Mínimo":"4",
-        "Quantidade":"Máximo: 2 por criatura (acima de CR8)"
+        "Quantidade":"Máximo: 2 por criatura (acima de CR8)",
+        "IMG":""
     },
     {
         "Material":"Diamante Celeste",
@@ -118,7 +128,8 @@
         "Drop":"Monstro",
         "Drop Rate Base":"20+CR%",
         "CR Mínimo":"4",
-        "Quantidade":"Máximo: 2 por criatura (acima de CR8)"
+        "Quantidade":"Máximo: 2 por criatura (acima de CR8)",
+        "IMG":""
     },
     {
         "Material":"Quartzo Sísmico",
@@ -129,7 +140,8 @@
         "Drop":"Monstro",
         "Drop Rate Base":"20+CR%",
         "CR Mínimo":"4",
-        "Quantidade":"Máximo: 2 por criatura (acima de CR8)"
+        "Quantidade":"Máximo: 2 por criatura (acima de CR8)",
+        "IMG":""
     },
     {
         "Material":"Ametista Clairvoyante",
@@ -140,7 +152,8 @@
         "Drop":"Monstro",
         "Drop Rate Base":"20+CR%",
         "CR Mínimo":"4",
-        "Quantidade":"Máximo: 2 por criatura (acima de CR8)"
+        "Quantidade":"Máximo: 2 por criatura (acima de CR8)",
+        "IMG":""
     },
     {
         "Material":"Cristal Ressonante",
@@ -151,7 +164,8 @@
         "Drop":"Monstro",
         "Drop Rate Base":"20+CR%",
         "CR Mínimo":"4",
-        "Quantidade":"Máximo: 2 por criatura (acima de CR8)"
+        "Quantidade":"Máximo: 2 por criatura (acima de CR8)",
+        "IMG":""
     },
     {
         "Material":"Âmbar Vivo",
@@ -162,7 +176,8 @@
         "Drop":"Monstro",
         "Drop Rate Base":"20+CR%",
         "CR Mínimo":"4",
-        "Quantidade":"Máximo: 2 por criatura (acima de CR8)"
+        "Quantidade":"Máximo: 2 por criatura (acima de CR8)",
+        "IMG":""
     },
     {
         "Material":"Couro Trabalhado",
@@ -173,7 +188,8 @@
         "Drop":"Monstro",
         "Drop Rate Base":"100%",
         "CR Mínimo":"",
-        "Quantidade":""
+        "Quantidade":"",
+        "IMG":""
     },
     {
         "Material":"Aço",
@@ -184,7 +200,8 @@
         "Drop":"Mundo",
         "Drop Rate Base":"",
         "CR Mínimo":"",
-        "Quantidade":""
+        "Quantidade":"",
+        "IMG":""
     },
     {
         "Material":"Madeira-de-Lei",
@@ -195,7 +212,8 @@
         "Drop":"Mundo",
         "Drop Rate Base":"",
         "CR Mínimo":"",
-        "Quantidade":""
+        "Quantidade":"",
+        "IMG":""
     },
     {
         "Material":"Aetherium",
@@ -206,7 +224,8 @@
         "Drop":"Monstro",
         "Drop Rate Base":"20+CR%",
         "CR Mínimo":"10",
-        "Quantidade":""
+        "Quantidade":"",
+        "IMG":""
     },
     {
         "Material":"Ignita",
@@ -217,7 +236,8 @@
         "Drop":"Monstro",
         "Drop Rate Base":"10+(1\/2CR)%",
         "CR Mínimo":"15",
-        "Quantidade":"Máximo: 1"
+        "Quantidade":"Máximo: 1",
+        "IMG":""
     },
     {
         "Material":"Aquamarita",
@@ -228,7 +248,8 @@
         "Drop":"Monstro",
         "Drop Rate Base":"10+(1\/2CR)%",
         "CR Mínimo":"15",
-        "Quantidade":"Máximo: 1"
+        "Quantidade":"Máximo: 1",
+        "IMG":""
     },
     {
         "Material":"Fulgorita",
@@ -239,7 +260,8 @@
         "Drop":"Monstro",
         "Drop Rate Base":"10+(1\/2CR)%",
         "CR Mínimo":"15",
-        "Quantidade":"Máximo: 1"
+        "Quantidade":"Máximo: 1",
+        "IMG":""
     },
     {
         "Material":"Ácidalita",
@@ -250,7 +272,8 @@
         "Drop":"Monstro",
         "Drop Rate Base":"10+(1\/2CR)%",
         "CR Mínimo":"15",
-        "Quantidade":"Máximo: 1"
+        "Quantidade":"Máximo: 1",
+        "IMG":""
     },
     {
         "Material":"Serpetinita",
@@ -261,7 +284,8 @@
         "Drop":"Monstro",
         "Drop Rate Base":"10+(1\/2CR)%",
         "CR Mínimo":"15",
-        "Quantidade":"Máximo: 1"
+        "Quantidade":"Máximo: 1",
+        "IMG":""
     },
     {
         "Material":"Obsidianyx",
@@ -272,7 +296,8 @@
         "Drop":"Monstro",
         "Drop Rate Base":"10+(1\/2CR)%",
         "CR Mínimo":"15",
-        "Quantidade":"Máximo: 1"
+        "Quantidade":"Máximo: 1",
+        "IMG":""
     },
     {
         "Material":"Aurorita",
@@ -283,7 +308,8 @@
         "Drop":"Monstro",
         "Drop Rate Base":"10+(1\/2CR)%",
         "CR Mínimo":"15",
-        "Quantidade":"Máximo: 1"
+        "Quantidade":"Máximo: 1",
+        "IMG":""
     },
     {
         "Material":"Tremorita",
@@ -294,7 +320,8 @@
         "Drop":"Monstro",
         "Drop Rate Base":"10+(1\/2CR)%",
         "CR Mínimo":"15",
-        "Quantidade":"Máximo: 1"
+        "Quantidade":"Máximo: 1",
+        "IMG":""
     },
     {
         "Material":"Psicalita",
@@ -305,7 +332,8 @@
         "Drop":"Monstro",
         "Drop Rate Base":"10+(1\/2CR)%",
         "CR Mínimo":"15",
-        "Quantidade":"Máximo: 1"
+        "Quantidade":"Máximo: 1",
+        "IMG":""
     },
     {
         "Material":"Ecoita",
@@ -316,7 +344,8 @@
         "Drop":"Monstro",
         "Drop Rate Base":"10+(1\/2CR)%",
         "CR Mínimo":"15",
-        "Quantidade":"Máximo: 1"
+        "Quantidade":"Máximo: 1",
+        "IMG":""
     },
     {
         "Material":"Espectrolita",
@@ -327,6 +356,7 @@
         "Drop":"Monstro",
         "Drop Rate Base":"10+(1\/2CR)%",
         "CR Mínimo":"15",
-        "Quantidade":"Máximo: 1"
+        "Quantidade":"Máximo: 1",
+        "IMG":""
     }
 ]
