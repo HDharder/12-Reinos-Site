@@ -6,7 +6,7 @@
         "TCE",
         "GrimHollowPG24",
         "12Reinos",
-        "Artificer"
+        "XUA2025EberronUpdates"
     ],
     "bloqueios": [
         "Twilight Domain",
@@ -29,8 +29,8 @@
             "rename": "12 Reinos",
             "color": "#9933cc"
         },
-        "Artificer": {
-            "rename": "UA",
+        "XUA2025EberronUpdates": {
+            "rename": "UA Eberron",
             "color": "#9933cc"
         }
     }
