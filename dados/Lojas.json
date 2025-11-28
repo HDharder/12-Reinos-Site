@@ -1,44 +1,44 @@
 [
     {
-        "ID do mercado": "1435100818813485077",
-        "possibilidades": "Compra",
-        "tipo de loja": "Distrito de Produção [Estoque]",
-        "Tipo_Mercado": "text",
-        "Valid_sell": ""
+        "ID do mercado":"1435100818813485077",
+        "possibilidades":"Compra",
+        "tipo de loja":"Distrito de Produção [Estoque]",
+        "Tipo_Mercado":"text",
+        "Valid_sell":null
     },
     {
-        "ID do mercado": "1435132653753073797",
-        "possibilidades": "Compra e Venda",
-        "tipo de loja": "Mercado do Bastião [Caravana]",
-        "Tipo_Mercado": "text",
-        "Valid_sell": "Itens Mundanos, Armas, Escudos/Armaduras"
+        "ID do mercado":"1435132653753073797",
+        "possibilidades":"Compra e Venda",
+        "tipo de loja":"Mercado do Bastião [Caravana]",
+        "Tipo_Mercado":"text",
+        "Valid_sell":"Itens Mundanos, Armas, Escudos\/Armaduras"
     },
     {
-        "ID do mercado": "1435605396642599092",
-        "possibilidades": "Compra e Venda",
-        "tipo de loja": "Mercado da Cidade*{15}",
-        "Tipo_Mercado": "text",
-        "Valid_sell": "Itens Mundanos"
+        "ID do mercado":"1435605396642599092",
+        "possibilidades":"Compra e Venda",
+        "tipo de loja":"Mercado da Cidade*{15}",
+        "Tipo_Mercado":"text",
+        "Valid_sell":"Itens Mundanos"
     },
     {
-        "ID do mercado": "1435629893466456064",
-        "possibilidades": "Compra",
-        "tipo de loja": "Lojas* (O Pavilhão das Mil Brasas) [Estoque]",
-        "Tipo_Mercado": "text",
-        "Valid_sell": ""
+        "ID do mercado":"1435629893466456064",
+        "possibilidades":"Compra",
+        "tipo de loja":"Lojas* (O Pavilhão das Mil Brasas) [Estoque]",
+        "Tipo_Mercado":"text",
+        "Valid_sell":null
     },
     {
-        "ID do mercado": "1437821297102028972",
-        "possibilidades": "Compra e Venda",
-        "tipo de loja": "Alquimista",
-        "Tipo_Mercado": "text",
-        "Valid_sell": "Consumíveis Mágicos"
+        "ID do mercado":"1437821297102028972",
+        "possibilidades":"Compra e Venda",
+        "tipo de loja":"Alquimista",
+        "Tipo_Mercado":"text",
+        "Valid_sell":"Consumíveis Mágicos"
     },
     {
-        "ID do mercado": "1015029328863576076",
-        "possibilidades": "Venda",
-        "tipo de loja": "Transacao [Players]",
-        "Tipo_Mercado": "category",
-        "Valid_sell": "Consumíveis Mágicos, Itens Mundanos, Armas, Escudos/Armaduras, Itens Mágicos, Materiais, Ervas, Misc"
+        "ID do mercado":"1015029328863576076",
+        "possibilidades":"Venda",
+        "tipo de loja":"Transacao [Players]",
+        "Tipo_Mercado":"category",
+        "Valid_sell":"Consumíveis Mágicos, Itens Mundanos, Armas, Escudos\/Armaduras, Itens Mágicos, Materiais, Ervas, Misc"
     }
 ]
